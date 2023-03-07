@@ -21,17 +21,29 @@ hatecrimes <- read_csv("data/NYPD_Hate_Crimes.csv")
 
 -   Identify the source of the data.
 
+    -   This data was taken from NYC OpenData
+
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
+    -   This data was originally collected in 2018 as a part of The Squirrel Census. It was collected by volunteer "squirrel sighters" who observed hundreds of squirrels.
+
 -   Write a brief description of the observations.
+
+    -   Each observation in this dataset represents one squirrel sighting. The data contains info on the location and time the squirrel was sighted, what it was doing, what sounds it was making, and many other things.
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+    -   Are juvenile squirrels friendlier to humans than adult squirrels? How does this manifest in their behavior?
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+    -   The research topic is about friendliness and innocence in squirrels. We predict that younger squirrels will be more friendly around humans because they have not yet learned the dangers of humans. We predict this because we can observe this behavior in younger humans since younger kids tend to be less cautious because they are less informed.
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+    -   The variables involved in this research question are Age, Approaches, Indifferent, and Runs from. These are all categorical variables. The latter three variables all describe behavior around humans.
 
 ## Literature
 
