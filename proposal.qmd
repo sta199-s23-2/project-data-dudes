@@ -12,6 +12,7 @@ editor: visual
 library(tidyverse)
 squirrel <- read_csv("data/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
 global_emissions <- read_csv("data/global_emissions.csv")
+hatecrimes <- read_csv("data/NYPD_Hate_Crimes.csv")
 ```
 
 # Data 1
@@ -113,5 +114,5 @@ glimpse(global_emissions)
 ```{r}
 #| label: load-data-3
 
-# add code here
+glimpse(hatecrimes)
 ```
