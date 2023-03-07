@@ -65,21 +65,17 @@ glimpse(squirrel)
 
 ## Introduction and data
 
--   Identify the source of the data. **The data set is from Corgis Datasets Project and was created by Sam Donald.**
+-   Identify the source of the data. **The data set is from the CORGIS** **data set and was created by Sam Donald.**
 
--   State when and how it was originally collected (by the original data curator, not necessarily how you found the data). **Sam Donald is the creator of the data set and it was created on 9/23/2022. The data was collected from key metrics maintained by Our World in Data and is updated regularly. Different projects such as the Global Carbon Project was used to process and file the data that was then organized by Sam Donald.**
+-   State when and how it was originally collected (by the original data curator, not necessarily how you found the data). **Sam Donald is the creator of the data set and was created on** **9/23/2022.**
 
--   Write a brief description of the observations.
+-   Write a brief description of the observations. **The observations compares various countries and regions in relation to overall emission trends.** **The data set also compares from what industry such as coal, gas, etc and how much each industry adds to a specific emission.**
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
-Which energy sources have created the most emissions of CO2 in the US, China, and India from 1992 to 2018? How can this information help the fight against climate change.
-
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
-
-This research topic focuses on the 5 most common industries that produce CO2 in countries around the world in three different stages of development. The hypotheses differ depending on the development of the country. In China and India it is hypothesized that oil and coal CO2 emissions are the highest of the 5 industries, while in the US gas C02 emissions will be the highest.
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
@@ -121,7 +117,7 @@ Hate crimes in New York City is a research topic that examines the prevalence, l
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
-We are focusing on the variable "Bias Motive Description", which is a categorical variable.
+We are focusing on the variable "Bias Motive Description", which is a categorical variable. Year is also a variable that we are exploring in our research question, which is a quantitative variable.
 
 ## Literature
 
