@@ -53,11 +53,11 @@ glimpse(squirrel)
 
 ## Introduction and data
 
--   Identify the source of the data.
+-   Identify the source of the data. **The data set is from the CORGIS** **data set and was created by Sam Donald.**
 
--   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
+-   State when and how it was originally collected (by the original data curator, not necessarily how you found the data). **Sam Donald is the creator of the data set and was created on** **9/23/2022.**
 
--   Write a brief description of the observations.
+-   Write a brief description of the observations. **The observations compares various countries and regions in relation to overall emission trends.** **The data set also compares from what industry such as coal, gas, etc and how much each industry adds to a specific emission.**
 
 ## Research question
 
