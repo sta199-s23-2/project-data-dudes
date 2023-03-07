@@ -21,17 +21,29 @@ hatecrimes <- read_csv("data/NYPD_Hate_Crimes.csv")
 
 -   Identify the source of the data.
 
+    -   This data was taken from NYC OpenData
+
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
+    -   This data was originally collected in 2018 as a part of The Squirrel Census. It was collected by volunteer "squirrel sighters" who observed hundreds of squirrels.
+
 -   Write a brief description of the observations.
+
+    -   Each observation in this dataset represents one squirrel sighting. The data contains info on the location and time the squirrel was sighted, what it was doing, what sounds it was making, and many other things.
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+    -   Are juvenile squirrels friendlier to humans than adult squirrels? How does this manifest in their behavior?
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+    -   The research topic is about friendliness and innocence in squirrels. We predict that younger squirrels will be more friendly around humans because they have not yet learned the dangers of humans. We predict this because we can observe this behavior in younger humans since younger kids tend to be less cautious because they are less informed.
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+    -   The variables involved in this research question are Age, Approaches, Indifferent, and Runs from. These are all categorical variables. The latter three variables all describe behavior around humans.
 
 ## Literature
 
@@ -53,19 +65,29 @@ glimpse(squirrel)
 
 ## Introduction and data
 
--   Identify the source of the data. **The data set is from the CORGIS** **data set and was created by Sam Donald.**
+-   Identify the source of the data.
 
+<<<<<<< HEAD
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data). **Sam Donald is the creator of the data set and was created on** **9/23/2022. The data was collected from key metrics maintained by Our World in Data and is updated regularly. Different projects such as the Global Carbon Project was used to process and file the data that was then organized by Sam Donald.**
+=======
+-   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
+>>>>>>> 1b4e19cf6421b14d7765cc8cd488dcd9bf19d96e
 
--   Write a brief description of the observations. **The observations compares various countries and regions in relation to overall emission trends.** **The data set also compares from what industry such as coal, gas, etc and how much each industry adds to a specific emission.**
+-   Write a brief description of the observations.
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+Which energy sources have created the most emissions of CO2 in the US, China, and India from 1992 to 2018? How can this information help the fight against climate change. 
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+This research topic focuses on the 5 most common industries that produce CO2 in countries around the world in three different stages of development.  The hypotheses differ depending on the development of the country. In China and India it is hypothesized that oil and coal CO2 emissions are the highest of the 5 industries, while in the US gas C02 emissions will be the highest. 
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+
 
 ## Literature
 
@@ -97,9 +119,15 @@ glimpse(global_emissions)
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+    Research Question: In recent years, how have hate crime bias motives shifted in New York City?
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+Hate crimes in New York City is a research topic that examines the prevalence, location, date, offense description, and reason for bias-motivated incidents that occur in the city. A hate crime is a criminal act that is committed against an individual or group based on their perceived or actual race, ethnicity, religion, gender, sexual orientation, or other characteristics. This data set includes information on the bias-motive for these crimes; were they racially motivated(anti-Asian, anti-Black, etc), religiously motivated (anti-Jewish, etc), gender motivated (anti-female, anti-trans), sexually motivated (homosexual, etc), and more. We hypothesize that in the wake of the COVID-19 pandemic, anti-Asian hate crimes in New York City have increased.
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+We are focusing on the variable "Bias Motive Description", which is a categorical variable.
 
 ## Literature
 
