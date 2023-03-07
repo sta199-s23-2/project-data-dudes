@@ -53,19 +53,25 @@ glimpse(squirrel)
 
 ## Introduction and data
 
--   Identify the source of the data. **The data set is from the CORGIS** **data set and was created by Sam Donald.**
+-   Identify the source of the data.
 
--   State when and how it was originally collected (by the original data curator, not necessarily how you found the data). **Sam Donald is the creator of the data set and was created on** **9/23/2022.**
+-   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
--   Write a brief description of the observations. **The observations compares various countries and regions in relation to overall emission trends.** **The data set also compares from what industry such as coal, gas, etc and how much each industry adds to a specific emission.**
+-   Write a brief description of the observations.
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+Which energy sources have created the most emissions of CO2 in the US, China, and India from 1992 to 2018? How can this information help the fight against climate change. 
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+This research topic focuses on the 5 most common industries that produce CO2 in countries around the world in three different stages of development.  The hypotheses differ depending on the development of the country. In China and India it is hypothesized that oil and coal CO2 emissions are the highest of the 5 industries, while in the US gas C02 emissions will be the highest. 
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+
 
 ## Literature
 
