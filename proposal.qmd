@@ -65,13 +65,9 @@ glimpse(squirrel)
 
 ## Introduction and data
 
--   Identify the source of the data.
+-   Identify the source of the data. **The data set is from Corgis Datasets Project and was created by Sam Donald.**
 
-<<<<<<< HEAD
--   State when and how it was originally collected (by the original data curator, not necessarily how you found the data). **Sam Donald is the creator of the data set and was created on** **9/23/2022. The data was collected from key metrics maintained by Our World in Data and is updated regularly. Different projects such as the Global Carbon Project was used to process and file the data that was then organized by Sam Donald.**
-=======
--   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
->>>>>>> 1b4e19cf6421b14d7765cc8cd488dcd9bf19d96e
+-   State when and how it was originally collected (by the original data curator, not necessarily how you found the data). **Sam Donald is the creator of the data set and it was created on 9/23/2022. The data was collected from key metrics maintained by Our World in Data and is updated regularly. Different projects such as the Global Carbon Project was used to process and file the data that was then organized by Sam Donald.**
 
 -   Write a brief description of the observations.
 
@@ -79,15 +75,13 @@ glimpse(squirrel)
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
-Which energy sources have created the most emissions of CO2 in the US, China, and India from 1992 to 2018? How can this information help the fight against climate change. 
+Which energy sources have created the most emissions of CO2 in the US, China, and India from 1992 to 2018? How can this information help the fight against climate change.
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
-This research topic focuses on the 5 most common industries that produce CO2 in countries around the world in three different stages of development.  The hypotheses differ depending on the development of the country. In China and India it is hypothesized that oil and coal CO2 emissions are the highest of the 5 industries, while in the US gas C02 emissions will be the highest. 
+This research topic focuses on the 5 most common industries that produce CO2 in countries around the world in three different stages of development. The hypotheses differ depending on the development of the country. In China and India it is hypothesized that oil and coal CO2 emissions are the highest of the 5 industries, while in the US gas C02 emissions will be the highest.
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
-
-
 
 ## Literature
 
@@ -110,13 +104,10 @@ glimpse(global_emissions)
 ## Introduction and data
 
 -   Identify the source of the data.
-**The source of the data from NYC Open Data platform, specifically provided by the Police Department (NYPD).**
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
-**This data is collected by Open Data which is a free public data published by trained New York City agencies and other partners, including NYPD (New York City Policy Department. This data was recently updated on February 1, 2023 but created on October 29, 2020. It was originally collected through the NYPD records and provided to NYC Open Data to be organized and dispersed for the benefit of public safety. **
 
 -   Write a brief description of the observations.
-**This dataset observes NYC Hate Crimes within certain Borough in New York City happening at a specific time. It in depth looks at how certain claims have bias motives and within certain offense categories.**
 
 ## Research question
 
