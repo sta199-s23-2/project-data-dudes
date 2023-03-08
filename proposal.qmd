@@ -81,9 +81,13 @@ glimpse(squirrel)
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+    **Which industry between coal, gas, and oil in India, China, and USA creates the most CO2 emission production from 1992 to 2018?**
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
--   Identify the types of variables in your research question. Categorical? Quantitative?
+    **The research topic will look at the three specified countries and compare over time which industry in each country releases the most and least CO2 emission and if the industry adding the most CO2 to the atmosphere changes for each country over time. The hypothesis is that because the three countries are in different stages of development, India and China will have coal as the industry causing the most CO2 emission and USA will have oil as the indsutry emitting the most CO2.**
+
+-   Identify the types of variables in your research question. Categorical? Quantitative? **Emissions.Production.CO2.Coal, Emissions.Production.CO2.Gas, and Emissions.Production.CO2.Oil are all quantitative variables. Each row is a different country with a year between 1992 and 2018 in chronological order.**
 
 ## Literature
 
