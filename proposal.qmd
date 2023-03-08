@@ -93,11 +93,11 @@ glimpse(squirrel)
 
 -   Provide a one paragraph summary about the article.
 
-    CO2 is by far one of the most harmful greenhouse gases emitted that humans have increased. The article cites how "human activity is responsible for adding as much as 110.5 million tons of carbon dioxide daily into the atmosphere" from various industries. The article explains how the top 5 most carbon intensive industries are energy production, agriculture, industry, transport, and residential sector. It also explains how in different parts of the world these industries vary in degree of carbon production. Energy production to power homes, offices, etc from fossil fuels adds greatly to CO2 production. The article discusses the global distribution by sector.
+    CO2 is by far one of the most harmful greenhouse gases emitted that humans have increased. The article cites how "human activity is responsible for adding as much as 110.5 million tons of carbon dioxide daily into the atmosphere" from various industries. The article explains how the top 5 most carbon intensive industries are energy production, agriculture, industry, transport, and residential sector. It also explains how in different parts of the world these industries vary in degree of carbon production. Energy production to power homes, offices, etc from fossil fuels adds greatly to CO2 production. The article discusses the global distribution by sector and how it depends on coal, natural gas, and oil but not how they differ independently.
 
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
 
-    Our research question
+    Our research question is different than the article cited because our research question aspires to split up the industries as well as three countries in three different stages of development to then explore which country adds the most or least to CO2 emissions by which industry. Essentially, we seek to explore with more specificity which industries depending on the stage of development of the country add to CO2 emissions instead of only in a global point of view that the article does.
 
 ## Glimpse of data
 
