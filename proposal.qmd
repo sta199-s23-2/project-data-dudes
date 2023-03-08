@@ -132,9 +132,17 @@ We are focusing on the variable "Bias Motive Description", which is a categorica
 
 -   Find one published credible article on the topic you are interested in researching.
 
+    Han S, Riddell JR, Piquero AR. Anti-Asian American Hate Crimes Spike During the Early Stages of the COVID-19 Pandemic. J Interpers Violence. 2023 Feb;38(3-4):3513-3533. doi: 10.1177/08862605221107056. Epub 2022 Jun 3. PMID: 35657278; PMCID: PMC9168424.
+
+    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9168424/
+
 -   Provide a one paragraph summary about the article.
 
+    According to a recent analysis by the California State University Center for the Study of Hate and Extremism, hate crimes against Asian Americans increased by about 150% in major U.S. cities in 2020, with the majority of the events taking place in New York and Los Angeles. Also, they discovered that regions with larger Asian populations---among them, New York---had a greater likelihood of experiencing these hate crimes. Racist rhetoric relating to the epidemic has also been linked to hate crimes. Especially, after March 16, 2020, when the accusatory terms "Kung flu" and "Chinese virus" were made public, hate crimes against Asian Americans briefly increased. It is also interesting to note that generally speaking hate crimes have decreased within the US, but with the pandemic anti-Asian hate crimes have actually increased. This article highlights the need for increased attention and action to address anti-Asian racism and hate crimes, specifically in wake of the COVID-19 pandemic. 
+
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+    Our research question build upon this, by investigating New York specifically. This study notes Los Angeles and New York as major cities with large Asian populations, while draws general trends regarding Asian-american hate crimes. We are choosing to narrow in on New York specifically. It would be interesting to see if the noticeable shift following March 16 that was observed in this article, can also be seen in the New York specific data.
 
 ## Glimpse of data
 
