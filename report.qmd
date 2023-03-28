@@ -29,7 +29,7 @@ Data 1
 
 Research Question:
 
--   Are juvenile squirrels friendlier to humans than adult squirrels? In other words, does age affect the social behavior of squirrels? 
+-   Are juvenile squirrels friendlier to humans than adult squirrels? In other words, does age affect the social behavior of squirrels?
 
 \- A description of the research topic along with a concise statement of your hypotheses on this topic.
 
