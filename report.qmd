@@ -23,9 +23,7 @@ Data 1
 
 -   Each observation in this dataset represents one squirrel sighting. The data contains info on the location and time the squirrel was sighted, what it was doing, what sounds it was making, and many other things.
 
--   
-
-    Method
+-   Method
 
 \## Research question
 
