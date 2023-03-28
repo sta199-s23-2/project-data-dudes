@@ -58,3 +58,8 @@ Data 1
 **- Results**
 
 **- W+F**
+
+What are you going to do with missing information?
+Does your response variable only have 2 levels? If not, how will you make sure it does?
+
+Are you going to include other variables to "account" for them? If so, what are they? Why?
