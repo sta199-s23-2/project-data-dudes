@@ -16,93 +16,93 @@
   {
     "objectID": "proposal.html",
     "href": "proposal.html",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "",
-    "text": "library(tidyverse)\n\nWarning: package 'ggplot2' was built under R version 4.2.2\n\n\nWarning: package 'tidyr' was built under R version 4.2.2\n\n\nWarning: package 'readr' was built under R version 4.2.2\n\n\nWarning: package 'purrr' was built under R version 4.2.2"
+    "text": "library(tidyverse)\nsquirrel <- read_csv(\"data/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv\")\nglobal_emissions <- read_csv(\"data/global_emissions.csv\")\nhatecrimes <- read_csv(\"data/NYPD_Hate_Crimes.csv\")"
   },
   {
     "objectID": "proposal.html#introduction-and-data",
     "href": "proposal.html#introduction-and-data",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Introduction and data",
-    "text": "Introduction and data\n\nIdentify the source of the data.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\nWrite a brief description of the observations."
+    "text": "Introduction and data\n\nIdentify the source of the data.\n\nThis data was taken from NYC OpenData\n\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\n\nThis data was originally collected in 2018 as a part of The Squirrel Census. It was collected by volunteer “squirrel sighters” who observed hundreds of squirrels.\n\nWrite a brief description of the observations.\n\nEach observation in this dataset represents one squirrel sighting. The data contains info on the location and time the squirrel was sighted, what it was doing, what sounds it was making, and many other things."
   },
   {
     "objectID": "proposal.html#research-question",
     "href": "proposal.html#research-question",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Research question",
-    "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nA description of the research topic along with a concise statement of your hypotheses on this topic.\nIdentify the types of variables in your research question. Categorical? Quantitative?"
+    "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\n\nAre juvenile squirrels friendlier to humans than adult squirrels? How does this manifest in their behavior?\n\nA description of the research topic along with a concise statement of your hypotheses on this topic.\n\nThe research topic is about friendliness, innocence, and age in squirrels. We predict that younger squirrels will be less friendly around humans because they have not yet learned that these humans are largely harmless and (at times) give food. We predict this because we can observe this behavior in younger humans since younger kids tend to be less informed about their surroundings, and therefore will lean towards being more cautious of things. We would have to look into this data to confirm any of these predictions. The complete opposite of this prediction might be true.\n\nIdentify the types of variables in your research question. Categorical? Quantitative?\n\nThe variables involved in this research question are Age, Approaches, Indifferent, and Runs from. These are all categorical variables. The latter three variables all describe behavior around humans."
   },
   {
     "objectID": "proposal.html#literature",
     "href": "proposal.html#literature",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Literature",
-    "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\nProvide a one paragraph summary about the article.\nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited."
+    "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\n\nhttps://www.purchase.edu/live/files/2328-scalice-benson-and-howard-2018pdf\n\nProvide a one paragraph summary about the article.\n\nThis is an article about research conducted at the SUNY Purchase College in Westchester, NY about how squirrels have become increasingly tolerant toward a human presence. In their study, they sampled a total of 20 squirrels, 10 of which were taken from an urban environment, and 10 of which were taken from a rural environment. The data collected in this study found that urban squirrels were able to tolerate a smaller distance between them and a human presence than rural squirrels. It was also observed that the time it took a squirrel to react to the human presence was more delayed for the urban squirrels than the rural squirrels. This study shows a certain level of adaptability and behavior adjustment that squirrels experience depending on their environment. This article certainly leads to further questions like our research question about when this behavior is learned and what factors into this adaptation.\n\nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited.\n\nOur research question builds on the research conducted in this article because it questions if this adaptation and tolerance of a human presence is different for older and younger squirrels. Using The Squirrel Census, we can compare the behaviors toward humans for juvenile and adult squirrels."
   },
   {
     "objectID": "proposal.html#glimpse-of-data",
     "href": "proposal.html#glimpse-of-data",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Glimpse of data",
-    "text": "Glimpse of data\n\n# add code here"
+    "text": "Glimpse of data\n\nglimpse(squirrel)\n\nRows: 3,023\nColumns: 31\n$ X                                            <dbl> -73.95613, -73.96886, -73…\n$ Y                                            <dbl> 40.79408, 40.78378, 40.77…\n$ `Unique Squirrel ID`                         <chr> \"37F-PM-1014-03\", \"21B-AM…\n$ Hectare                                      <chr> \"37F\", \"21B\", \"11B\", \"32E…\n$ Shift                                        <chr> \"PM\", \"AM\", \"PM\", \"PM\", \"…\n$ Date                                         <dbl> 10142018, 10192018, 10142…\n$ `Hectare Squirrel Number`                    <dbl> 3, 4, 8, 14, 5, 3, 2, 2, …\n$ Age                                          <chr> NA, NA, NA, \"Adult\", \"Adu…\n$ `Primary Fur Color`                          <chr> NA, NA, \"Gray\", \"Gray\", \"…\n$ `Highlight Fur Color`                        <chr> NA, NA, NA, NA, \"Cinnamon…\n$ `Combination of Primary and Highlight Color` <chr> \"+\", \"+\", \"Gray+\", \"Gray+…\n$ `Color notes`                                <chr> NA, NA, NA, \"Nothing sele…\n$ Location                                     <chr> NA, NA, \"Above Ground\", N…\n$ `Above Ground Sighter Measurement`           <chr> NA, NA, \"10\", NA, NA, NA,…\n$ `Specific Location`                          <chr> NA, NA, NA, NA, \"on tree …\n$ Running                                      <lgl> FALSE, FALSE, FALSE, FALS…\n$ Chasing                                      <lgl> FALSE, FALSE, TRUE, FALSE…\n$ Climbing                                     <lgl> FALSE, FALSE, FALSE, FALS…\n$ Eating                                       <lgl> FALSE, FALSE, FALSE, TRUE…\n$ Foraging                                     <lgl> FALSE, FALSE, FALSE, TRUE…\n$ `Other Activities`                           <chr> NA, NA, NA, NA, NA, NA, N…\n$ Kuks                                         <lgl> FALSE, FALSE, FALSE, FALS…\n$ Quaas                                        <lgl> FALSE, FALSE, FALSE, FALS…\n$ Moans                                        <lgl> FALSE, FALSE, FALSE, FALS…\n$ `Tail flags`                                 <lgl> FALSE, FALSE, FALSE, FALS…\n$ `Tail twitches`                              <lgl> FALSE, FALSE, FALSE, FALS…\n$ Approaches                                   <lgl> FALSE, FALSE, FALSE, FALS…\n$ Indifferent                                  <lgl> FALSE, FALSE, FALSE, FALS…\n$ `Runs from`                                  <lgl> FALSE, FALSE, FALSE, TRUE…\n$ `Other Interactions`                         <chr> NA, NA, NA, NA, NA, NA, N…\n$ `Lat/Long`                                   <chr> \"POINT (-73.9561344937861…"
   },
   {
     "objectID": "proposal.html#introduction-and-data-1",
     "href": "proposal.html#introduction-and-data-1",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Introduction and data",
-    "text": "Introduction and data\n\nIdentify the source of the data.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\nWrite a brief description of the observations."
+    "text": "Introduction and data\n\nIdentify the source of the data. The data set is from the CORGIS data set and was created by Sam Donald.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data). Sam Donald is the creator of the data set and was created on 9/23/2022.\nWrite a brief description of the observations. The observations compares various countries and regions in relation to overall emission trends. The data set also compares from what industry such as coal, gas, etc and how much each industry adds to a specific emission."
   },
   {
     "objectID": "proposal.html#research-question-1",
     "href": "proposal.html#research-question-1",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Research question",
     "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nA description of the research topic along with a concise statement of your hypotheses on this topic.\nIdentify the types of variables in your research question. Categorical? Quantitative?"
   },
   {
     "objectID": "proposal.html#literature-1",
     "href": "proposal.html#literature-1",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Literature",
     "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\nProvide a one paragraph summary about the article.\nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited."
   },
   {
     "objectID": "proposal.html#glimpse-of-data-1",
     "href": "proposal.html#glimpse-of-data-1",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Glimpse of data",
-    "text": "Glimpse of data\n\n# add code here"
+    "text": "Glimpse of data\n\nglimpse(global_emissions)\n\nRows: 2,484\nColumns: 20\n$ Year                                 <dbl> 1992, 1993, 1994, 1995, 1996, 199…\n$ Country.Name                         <chr> \"Afghanistan\", \"Afghanistan\", \"Af…\n$ Country.Code                         <chr> \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\"…\n$ Country.GDP                          <dbl> 12677538816, 9834580992, 79198571…\n$ Country.Population                   <dbl> 14485543, 15816601, 17075728, 181…\n$ Emissions.Production.CH4             <dbl> 7.13, 7.21, 7.47, 7.83, 8.67, 9.4…\n$ Emissions.Production.N2O             <dbl> 2.89, 2.93, 2.76, 2.88, 3.12, 3.4…\n$ Emissions.Production.CO2.Cement      <dbl> 0.046, 0.047, 0.047, 0.047, 0.047…\n$ Emissions.Production.CO2.Coal        <dbl> 0.022, 0.018, 0.015, 0.015, 0.007…\n$ Emissions.Production.CO2.Gas         <dbl> 0.363, 0.352, 0.338, 0.322, 0.308…\n$ Emissions.Production.CO2.Oil         <dbl> 0.927, 0.894, 0.860, 0.824, 0.780…\n$ Emissions.Production.CO2.Flaring     <dbl> 0.022, 0.022, 0.022, 0.022, 0.022…\n$ Emissions.Production.CO2.Other       <dbl> 0.000000e+00, 0.000000e+00, 2.220…\n$ Emissions.Production.CO2.Total       <dbl> 1.379, 1.333, 1.282, 1.230, 1.165…\n$ `Emissions.Global Share.CO2.Cement`  <dbl> 0.01, 0.01, 0.01, 0.01, 0.01, 0.0…\n$ `Emissions.Global Share.CO2.Coal`    <dbl> 0.00, 0.00, 0.00, 0.00, 0.00, 0.0…\n$ `Emissions.Global Share.CO2.Gas`     <dbl> 0.01, 0.01, 0.01, 0.01, 0.01, 0.0…\n$ `Emissions.Global Share.CO2.Oil`     <dbl> 0.01, 0.01, 0.01, 0.01, 0.01, 0.0…\n$ `Emissions.Global Share.CO2.Flaring` <dbl> 0.01, 0.01, 0.01, 0.01, 0.01, 0.0…\n$ `Emissions.Global Share.CO2.Total`   <dbl> 0.01, 0.01, 0.01, 0.01, 0.00, 0.0…"
   },
   {
     "objectID": "proposal.html#introduction-and-data-2",
     "href": "proposal.html#introduction-and-data-2",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Introduction and data",
-    "text": "Introduction and data\n\nIdentify the source of the data.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\nWrite a brief description of the observations."
+    "text": "Introduction and data\n\nIdentify the source of the data. The source of the data from NYC Open Data platform, specifically provided by the Police Department (NYPD).\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data). This data is collected by Open Data which is a free public data published by trained New York City agencies and other partners, including NYPD (New York City Policy Department. This data was recently updated on February 1, 2023 but created on October 29, 2020. It was originally collected through the NYPD records and provided to NYC Open Data to be organized and dispersed for the benefit of public safety.\nWrite a brief description of the observations. This dataset observes NYC Hate Crimes within certain Borough in New York City happening at a specific time. It in depth looks at how certain claims have bias motives and within certain offense categories."
   },
   {
     "objectID": "proposal.html#research-question-2",
     "href": "proposal.html#research-question-2",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Research question",
-    "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nA description of the research topic along with a concise statement of your hypotheses on this topic.\nIdentify the types of variables in your research question. Categorical? Quantitative?"
+    "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nResearch Question: In recent years, how have hate crime bias motives shifted in New York City?\nA description of the research topic along with a concise statement of your hypotheses on this topic.\n\nHate crimes in New York City is a research topic that examines the prevalence, location, date, offense description, and reason for bias-motivated incidents that occur in the city. A hate crime is a criminal act that is committed against an individual or group based on their perceived or actual race, ethnicity, religion, gender, sexual orientation, or other characteristics. This data set includes information on the bias-motive for these crimes; were they racially motivated(anti-Asian, anti-Black, etc), religiously motivated (anti-Jewish, etc), gender motivated (anti-female, anti-trans), sexually motivated (homosexual, etc), and more. We hypothesize that in the wake of the COVID-19 pandemic, anti-Asian hate crimes in New York City have increased.\n\nIdentify the types of variables in your research question. Categorical? Quantitative?\n\nWe are focusing on the variable “Bias Motive Description”, which is a categorical variable. Year is also a variable that we are exploring in our research question, which is a quantitative variable."
   },
   {
     "objectID": "proposal.html#literature-2",
     "href": "proposal.html#literature-2",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Literature",
-    "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\nProvide a one paragraph summary about the article.\nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited."
+    "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\nHan S, Riddell JR, Piquero AR. Anti-Asian American Hate Crimes Spike During the Early Stages of the COVID-19 Pandemic. J Interpers Violence. 2023 Feb;38(3-4):3513-3533. doi: 10.1177/08862605221107056. Epub 2022 Jun 3. PMID: 35657278; PMCID: PMC9168424.\nhttps://www.ncbi.nlm.nih.gov/pmc/articles/PMC9168424/\nProvide a one paragraph summary about the article.\nAccording to a recent analysis by the California State University Center for the Study of Hate and Extremism, hate crimes against Asian Americans increased by about 150% in major U.S. cities in 2020, with the majority of the events taking place in New York and Los Angeles. Also, they discovered that regions with larger Asian populations—among them, New York—had a greater likelihood of experiencing these hate crimes. Racist rhetoric relating to the epidemic has also been linked to hate crimes. Especially, after March 16, 2020, when the accusatory terms “Kung flu” and “Chinese virus” were made public, hate crimes against Asian Americans briefly increased. It is also interesting to note that generally speaking hate crimes have decreased within the US, but with the pandemic anti-Asian hate crimes have actually increased. This article highlights the need for increased attention and action to address anti-Asian racism and hate crimes, specifically in wake of the COVID-19 pandemic. \nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited.\nOur research question build upon this, by investigating New York specifically. This study notes Los Angeles and New York as major cities with large Asian populations, while draws general trends regarding Asian-american hate crimes. We are choosing to narrow in on New York specifically. It would be interesting to see if the noticeable shift following March 16 that was observed in this article, can also be seen in the New York specific data."
   },
   {
     "objectID": "proposal.html#glimpse-of-data-2",
     "href": "proposal.html#glimpse-of-data-2",
-    "title": "Project title",
+    "title": "Three Proposals",
     "section": "Glimpse of data",
-    "text": "Glimpse of data\n\n# add code here"
+    "text": "Glimpse of data\n\nglimpse(hatecrimes)\n\nRows: 1,971\nColumns: 14\n$ `Full Complaint ID`             <dbl> 2.019048e+14, 2.020044e+14, 2.020044e+…\n$ `Complaint Year Number`         <dbl> 2019, 2020, 2020, 2020, 2021, 2022, 20…\n$ `Month Number`                  <dbl> 3, 3, 3, 7, 4, 2, 1, 6, 6, 5, 4, 6, 9,…\n$ `Record Create Date`            <chr> \"03/10/2019\", \"03/28/2020\", \"03/28/202…\n$ `Complaint Precinct Code`       <dbl> 48, 44, 44, 45, 50, 46, 70, 94, 81, 90…\n$ `Patrol Borough Name`           <chr> \"PATROL BORO BRONX\", \"PATROL BORO BRON…\n$ County                          <chr> \"BRONX\", \"BRONX\", \"BRONX\", \"BRONX\", \"B…\n$ `Law Code Category Description` <chr> \"MISDEMEANOR\", \"FELONY\", \"FELONY\", \"MI…\n$ `Offense Description`           <chr> \"ASSAULT 3 & RELATED OFFENSES\", \"FELON…\n$ `PD Code Description`           <chr> \"ASSAULT 3\", \"ASSAULT 2,1,UNCLASSIFIED…\n$ `Bias Motive Description`       <chr> \"ANTI-WHITE\", \"ANTI-ASIAN\", \"ANTI-ASIA…\n$ `Offense Category`              <chr> \"Race/Color\", \"Race/Color\", \"Race/Colo…\n$ `Arrest Date`                   <chr> \"03/09/2019\", \"03/28/2020\", \"03/28/202…\n$ `Arrest Id`                     <chr> \"B31682806\", \"B32682490\", \"B32682492\",…"
   },
   {
     "objectID": "report.html",

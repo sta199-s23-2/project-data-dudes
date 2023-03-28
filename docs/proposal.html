@@ -2,19 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project title</title>
+<title>Three Proposals</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -53,7 +58,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -66,7 +71,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -157,7 +162,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -190,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project title</h1>
+<h1 class="title">Three Proposals</h1>
 <p class="subtitle lead">Proposal</p>
 </div>
 
@@ -206,50 +211,103 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyr' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'readr' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'purrr' was built under R version 4.2.2</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>squirrel <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>global_emissions <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/global_emissions.csv"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>hatecrimes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/NYPD_Hate_Crimes.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="data-1" class="level1">
 <h1>Data 1</h1>
 <section id="introduction-and-data" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data">Introduction and data</h2>
 <ul>
-<li><p>Identify the source of the data.</p></li>
-<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p></li>
-<li><p>Write a brief description of the observations.</p></li>
+<li><p>Identify the source of the data.</p>
+<ul>
+<li>This data was taken from NYC OpenData</li>
+</ul></li>
+<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p>
+<ul>
+<li>This data was originally collected in 2018 as a part of The Squirrel Census. It was collected by volunteer “squirrel sighters” who observed hundreds of squirrels.</li>
+</ul></li>
+<li><p>Write a brief description of the observations.</p>
+<ul>
+<li>Each observation in this dataset represents one squirrel sighting. The data contains info on the location and time the squirrel was sighted, what it was doing, what sounds it was making, and many other things.</li>
+</ul></li>
 </ul>
 </section>
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research question</h2>
 <ul>
-<li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
-<li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
-<li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
+<li><p>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</p>
+<ul>
+<li>Are juvenile squirrels friendlier to humans than adult squirrels? How does this manifest in their behavior?</li>
+</ul></li>
+<li><p>A description of the research topic along with a concise statement of your hypotheses on this topic.</p>
+<ul>
+<li>The research topic is about friendliness, innocence, and age in squirrels. We predict that younger squirrels will be less friendly around humans because they have not yet learned that these humans are largely harmless and (at times) give food. We predict this because we can observe this behavior in younger humans since younger kids tend to be less informed about their surroundings, and therefore will lean towards being more cautious of things. We would have to look into this data to confirm any of these predictions. The complete opposite of this prediction might be true.</li>
+</ul></li>
+<li><p>Identify the types of variables in your research question. Categorical? Quantitative?</p>
+<ul>
+<li>The variables involved in this research question are Age, Approaches, Indifferent, and Runs from. These are all categorical variables. The latter three variables all describe behavior around humans.</li>
+</ul></li>
 </ul>
 </section>
 <section id="literature" class="level2">
 <h2 class="anchored" data-anchor-id="literature">Literature</h2>
 <ul>
-<li><p>Find one published credible article on the topic you are interested in researching.</p></li>
-<li><p>Provide a one paragraph summary about the article.</p></li>
-<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p></li>
+<li><p>Find one published credible article on the topic you are interested in researching.</p>
+<ul>
+<li>https://www.purchase.edu/live/files/2328-scalice-benson-and-howard-2018pdf</li>
+</ul></li>
+<li><p>Provide a one paragraph summary about the article.</p>
+<ul>
+<li>This is an article about research conducted at the SUNY Purchase College in Westchester, NY about how squirrels have become increasingly tolerant toward a human presence. In their study, they sampled a total of 20 squirrels, 10 of which were taken from an urban environment, and 10 of which were taken from a rural environment. The data collected in this study found that urban squirrels were able to tolerate a smaller distance between them and a human presence than rural squirrels. It was also observed that the time it took a squirrel to react to the human presence was more delayed for the urban squirrels than the rural squirrels. This study shows a certain level of adaptability and behavior adjustment that squirrels experience depending on their environment. This article certainly leads to further questions like our research question about when this behavior is learned and what factors into this adaptation.</li>
+</ul></li>
+<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p>
+<ul>
+<li>Our research question builds on the research conducted in this article because it questions if this adaptation and tolerance of a human presence is different for older and younger squirrels. Using The Squirrel Census, we can compare the behaviors toward humans for juvenile and adult squirrels.</li>
+</ul></li>
 </ul>
 </section>
 <section id="glimpse-of-data" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(squirrel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 3,023
+Columns: 31
+$ X                                            &lt;dbl&gt; -73.95613, -73.96886, -73…
+$ Y                                            &lt;dbl&gt; 40.79408, 40.78378, 40.77…
+$ `Unique Squirrel ID`                         &lt;chr&gt; "37F-PM-1014-03", "21B-AM…
+$ Hectare                                      &lt;chr&gt; "37F", "21B", "11B", "32E…
+$ Shift                                        &lt;chr&gt; "PM", "AM", "PM", "PM", "…
+$ Date                                         &lt;dbl&gt; 10142018, 10192018, 10142…
+$ `Hectare Squirrel Number`                    &lt;dbl&gt; 3, 4, 8, 14, 5, 3, 2, 2, …
+$ Age                                          &lt;chr&gt; NA, NA, NA, "Adult", "Adu…
+$ `Primary Fur Color`                          &lt;chr&gt; NA, NA, "Gray", "Gray", "…
+$ `Highlight Fur Color`                        &lt;chr&gt; NA, NA, NA, NA, "Cinnamon…
+$ `Combination of Primary and Highlight Color` &lt;chr&gt; "+", "+", "Gray+", "Gray+…
+$ `Color notes`                                &lt;chr&gt; NA, NA, NA, "Nothing sele…
+$ Location                                     &lt;chr&gt; NA, NA, "Above Ground", N…
+$ `Above Ground Sighter Measurement`           &lt;chr&gt; NA, NA, "10", NA, NA, NA,…
+$ `Specific Location`                          &lt;chr&gt; NA, NA, NA, NA, "on tree …
+$ Running                                      &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Chasing                                      &lt;lgl&gt; FALSE, FALSE, TRUE, FALSE…
+$ Climbing                                     &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Eating                                       &lt;lgl&gt; FALSE, FALSE, FALSE, TRUE…
+$ Foraging                                     &lt;lgl&gt; FALSE, FALSE, FALSE, TRUE…
+$ `Other Activities`                           &lt;chr&gt; NA, NA, NA, NA, NA, NA, N…
+$ Kuks                                         &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Quaas                                        &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Moans                                        &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ `Tail flags`                                 &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ `Tail twitches`                              &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Approaches                                   &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ Indifferent                                  &lt;lgl&gt; FALSE, FALSE, FALSE, FALS…
+$ `Runs from`                                  &lt;lgl&gt; FALSE, FALSE, FALSE, TRUE…
+$ `Other Interactions`                         &lt;chr&gt; NA, NA, NA, NA, NA, NA, N…
+$ `Lat/Long`                                   &lt;chr&gt; "POINT (-73.9561344937861…</code></pre>
+</div>
 </div>
 </section>
 </section>
@@ -258,17 +316,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="introduction-and-data-1" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data-1">Introduction and data</h2>
 <ul>
-<li><p>Identify the source of the data.</p></li>
-<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p></li>
-<li><p>Write a brief description of the observations.</p></li>
+<li><p>Identify the source of the data. <strong>The data set is from the CORGIS</strong> <strong>data set and was created by Sam Donald.</strong></p></li>
+<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data). <strong>Sam Donald is the creator of the data set and was created on</strong> <strong>9/23/2022.</strong></p></li>
+<li><p>Write a brief description of the observations. <strong>The observations compares various countries and regions in relation to overall emission trends.</strong> <strong>The data set also compares from what industry such as coal, gas, etc and how much each industry adds to a specific emission.</strong></p></li>
 </ul>
 </section>
 <section id="research-question-1" class="level2">
 <h2 class="anchored" data-anchor-id="research-question-1">Research question</h2>
 <ul>
-<li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
-<li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
-<li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
+<li><p>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</p></li>
+<li><p>A description of the research topic along with a concise statement of your hypotheses on this topic.</p></li>
+<li><p>Identify the types of variables in your research question. Categorical? Quantitative?</p></li>
 </ul>
 </section>
 <section id="literature-1" class="level2">
@@ -282,7 +340,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="glimpse-of-data-1" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data-1">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(global_emissions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,484
+Columns: 20
+$ Year                                 &lt;dbl&gt; 1992, 1993, 1994, 1995, 1996, 199…
+$ Country.Name                         &lt;chr&gt; "Afghanistan", "Afghanistan", "Af…
+$ Country.Code                         &lt;chr&gt; "AFG", "AFG", "AFG", "AFG", "AFG"…
+$ Country.GDP                          &lt;dbl&gt; 12677538816, 9834580992, 79198571…
+$ Country.Population                   &lt;dbl&gt; 14485543, 15816601, 17075728, 181…
+$ Emissions.Production.CH4             &lt;dbl&gt; 7.13, 7.21, 7.47, 7.83, 8.67, 9.4…
+$ Emissions.Production.N2O             &lt;dbl&gt; 2.89, 2.93, 2.76, 2.88, 3.12, 3.4…
+$ Emissions.Production.CO2.Cement      &lt;dbl&gt; 0.046, 0.047, 0.047, 0.047, 0.047…
+$ Emissions.Production.CO2.Coal        &lt;dbl&gt; 0.022, 0.018, 0.015, 0.015, 0.007…
+$ Emissions.Production.CO2.Gas         &lt;dbl&gt; 0.363, 0.352, 0.338, 0.322, 0.308…
+$ Emissions.Production.CO2.Oil         &lt;dbl&gt; 0.927, 0.894, 0.860, 0.824, 0.780…
+$ Emissions.Production.CO2.Flaring     &lt;dbl&gt; 0.022, 0.022, 0.022, 0.022, 0.022…
+$ Emissions.Production.CO2.Other       &lt;dbl&gt; 0.000000e+00, 0.000000e+00, 2.220…
+$ Emissions.Production.CO2.Total       &lt;dbl&gt; 1.379, 1.333, 1.282, 1.230, 1.165…
+$ `Emissions.Global Share.CO2.Cement`  &lt;dbl&gt; 0.01, 0.01, 0.01, 0.01, 0.01, 0.0…
+$ `Emissions.Global Share.CO2.Coal`    &lt;dbl&gt; 0.00, 0.00, 0.00, 0.00, 0.00, 0.0…
+$ `Emissions.Global Share.CO2.Gas`     &lt;dbl&gt; 0.01, 0.01, 0.01, 0.01, 0.01, 0.0…
+$ `Emissions.Global Share.CO2.Oil`     &lt;dbl&gt; 0.01, 0.01, 0.01, 0.01, 0.01, 0.0…
+$ `Emissions.Global Share.CO2.Flaring` &lt;dbl&gt; 0.01, 0.01, 0.01, 0.01, 0.01, 0.0…
+$ `Emissions.Global Share.CO2.Total`   &lt;dbl&gt; 0.01, 0.01, 0.01, 0.01, 0.00, 0.0…</code></pre>
+</div>
 </div>
 </section>
 </section>
@@ -291,31 +373,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="introduction-and-data-2" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data-2">Introduction and data</h2>
 <ul>
-<li><p>Identify the source of the data.</p></li>
-<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p></li>
-<li><p>Write a brief description of the observations.</p></li>
+<li><p>Identify the source of the data. <strong>The source of the data from NYC Open Data platform, specifically provided by the Police Department (NYPD).</strong></p></li>
+<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data). <strong>This data is collected by Open Data which is a free public data published by trained New York City agencies and other partners, including NYPD (New York City Policy Department. This data was recently updated on February 1, 2023 but created on October 29, 2020. It was originally collected through the NYPD records and provided to NYC Open Data to be organized and dispersed for the benefit of public safety.</strong></p></li>
+<li><p>Write a brief description of the observations. <strong>This dataset observes NYC Hate Crimes within certain Borough in New York City happening at a specific time. It in depth looks at how certain claims have bias motives and within certain offense categories.</strong></p></li>
 </ul>
 </section>
 <section id="research-question-2" class="level2">
 <h2 class="anchored" data-anchor-id="research-question-2">Research question</h2>
 <ul>
-<li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
-<li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
+<li><p>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</p>
+<p>Research Question: In recent years, how have hate crime bias motives shifted in New York City?</p></li>
+<li><p>A description of the research topic along with a concise statement of your hypotheses on this topic.</p></li>
+</ul>
+<p>Hate crimes in New York City is a research topic that examines the prevalence, location, date, offense description, and reason for bias-motivated incidents that occur in the city. A hate crime is a criminal act that is committed against an individual or group based on their perceived or actual race, ethnicity, religion, gender, sexual orientation, or other characteristics. This data set includes information on the bias-motive for these crimes; were they racially motivated(anti-Asian, anti-Black, etc), religiously motivated (anti-Jewish, etc), gender motivated (anti-female, anti-trans), sexually motivated (homosexual, etc), and more. We hypothesize that in the wake of the COVID-19 pandemic, anti-Asian hate crimes in New York City have increased.</p>
+<ul>
 <li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
 </ul>
+<p>We are focusing on the variable “Bias Motive Description”, which is a categorical variable. Year is also a variable that we are exploring in our research question, which is a quantitative variable.</p>
 </section>
 <section id="literature-2" class="level2">
 <h2 class="anchored" data-anchor-id="literature-2">Literature</h2>
 <ul>
-<li><p>Find one published credible article on the topic you are interested in researching.</p></li>
-<li><p>Provide a one paragraph summary about the article.</p></li>
-<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p></li>
+<li><p>Find one published credible article on the topic you are interested in researching.</p>
+<p>Han S, Riddell JR, Piquero AR. Anti-Asian American Hate Crimes Spike During the Early Stages of the COVID-19 Pandemic. J Interpers Violence. 2023 Feb;38(3-4):3513-3533. doi: 10.1177/08862605221107056. Epub 2022 Jun 3. PMID: 35657278; PMCID: PMC9168424.</p>
+<p>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9168424/</p></li>
+<li><p>Provide a one paragraph summary about the article.</p>
+<p>According to a recent analysis by the California State University Center for the Study of Hate and Extremism, hate crimes against Asian Americans increased by about 150% in major U.S. cities in 2020, with the majority of the events taking place in New York and Los Angeles. Also, they discovered that regions with larger Asian populations—among them, New York—had a greater likelihood of experiencing these hate crimes. Racist rhetoric relating to the epidemic has also been linked to hate crimes. Especially, after March 16, 2020, when the accusatory terms “Kung flu” and “Chinese virus” were made public, hate crimes against Asian Americans briefly increased. It is also interesting to note that generally speaking hate crimes have decreased within the US, but with the pandemic anti-Asian hate crimes have actually increased. This article highlights the need for increased attention and action to address anti-Asian racism and hate crimes, specifically in wake of the COVID-19 pandemic.&nbsp;</p></li>
+<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p>
+<p>Our research question build upon this, by investigating New York specifically. This study notes Los Angeles and New York as major cities with large Asian populations, while draws general trends regarding Asian-american hate crimes. We are choosing to narrow in on New York specifically. It would be interesting to see if the noticeable shift following March 16 that was observed in this article, can also be seen in the New York specific data.</p></li>
 </ul>
 </section>
 <section id="glimpse-of-data-2" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data-2">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(hatecrimes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,971
+Columns: 14
+$ `Full Complaint ID`             &lt;dbl&gt; 2.019048e+14, 2.020044e+14, 2.020044e+…
+$ `Complaint Year Number`         &lt;dbl&gt; 2019, 2020, 2020, 2020, 2021, 2022, 20…
+$ `Month Number`                  &lt;dbl&gt; 3, 3, 3, 7, 4, 2, 1, 6, 6, 5, 4, 6, 9,…
+$ `Record Create Date`            &lt;chr&gt; "03/10/2019", "03/28/2020", "03/28/202…
+$ `Complaint Precinct Code`       &lt;dbl&gt; 48, 44, 44, 45, 50, 46, 70, 94, 81, 90…
+$ `Patrol Borough Name`           &lt;chr&gt; "PATROL BORO BRONX", "PATROL BORO BRON…
+$ County                          &lt;chr&gt; "BRONX", "BRONX", "BRONX", "BRONX", "B…
+$ `Law Code Category Description` &lt;chr&gt; "MISDEMEANOR", "FELONY", "FELONY", "MI…
+$ `Offense Description`           &lt;chr&gt; "ASSAULT 3 &amp; RELATED OFFENSES", "FELON…
+$ `PD Code Description`           &lt;chr&gt; "ASSAULT 3", "ASSAULT 2,1,UNCLASSIFIED…
+$ `Bias Motive Description`       &lt;chr&gt; "ANTI-WHITE", "ANTI-ASIAN", "ANTI-ASIA…
+$ `Offense Category`              &lt;chr&gt; "Race/Color", "Race/Color", "Race/Colo…
+$ `Arrest Date`                   &lt;chr&gt; "03/09/2019", "03/28/2020", "03/28/202…
+$ `Arrest Id`                     &lt;chr&gt; "B31682806", "B32682490", "B32682492",…</code></pre>
+</div>
 </div>
 
 
@@ -392,7 +501,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
