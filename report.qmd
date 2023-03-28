@@ -55,7 +55,8 @@ Data 1
 
 **- Results**
 
-**- W+F**
+
+**Issues**
 
 What are you going to do with missing information? Does your response variable only have 2 levels? If not, how will you make sure it does?
 
