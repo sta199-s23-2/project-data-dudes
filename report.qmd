@@ -71,7 +71,19 @@ squirrel_age |>
 
 **- Results**
 
+<<<<<<< HEAD
 **Issues**
+=======
+Our research question is aimed at finding
+
+What are you finding out?
+
+-   Are juvenile squirrels friendlier to humans than adult squirrels? In other words, does age affect the social behavior of squirrels?
+
+-- Make sure that this is connected to your research question. It is easy to get excited and explore your data set. Make sure that all results you generate are in-line with the research question you have asked.
+
+
+>>>>>>> 5e62b543befca8b91e9cba12c1d56f32deda053f
 
 What are you going to do with missing information? Does your response variable only have 2 levels? If not, how will you make sure it does?
 
