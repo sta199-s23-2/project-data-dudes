@@ -39,6 +39,22 @@ Research Question:
 
 -   The variables involved in this research question are Age, Approaches, Indifferent, and Runs from. These are all categorical variables. The latter three variables all describe behavior around humans.
 
+```{r}
+library(tidyverse)
+```
+
+```{r}
+squirrel_age <- squirrel |>
+  filter(!is.na(Age), Age != "?") |>
+  select(Age, Approaches, Indifferent, `Runs from`)
+```
+
+```{r}
+squirrel_age |>
+  ggplot(aes(x = Age, fill = `Runs from`)) +
+  geom_bar(position = "fill")
+```
+
 \## Literature
 
 \- Find one published credible article on the topic you are interested in researching.
@@ -54,7 +70,6 @@ Research Question:
 -   Our research question builds on the research conducted in this article because it questions if this adaptation and tolerance of a human presence is different for older and younger squirrels. Using The Squirrel Census, we can compare the behaviors toward humans for juvenile and adult squirrels.
 
 **- Results**
-
 
 **Issues**
 
