@@ -72,6 +72,8 @@ Are you going to include other variables to "account" for them? If so, what are 
 
 New Project:
 
+
+
 ```{r}
 global_emissions <- read_csv("data/global_emissions.csv")
 ```
