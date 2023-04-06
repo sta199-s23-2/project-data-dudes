@@ -104,7 +104,7 @@ target_emissions <- global_emissions |>
 ```
 
 ```{r}
-#| label: scatterplot-emissions
+#| label: scatterplot-coal
 
 target_emissions |>
   ggplot(
@@ -116,6 +116,8 @@ target_emissions |>
 ```
 
 ```{r}
+#| label: scatterplot-gas
+
 target_emissions |>
   ggplot(
     aes(x = Year, 
@@ -126,6 +128,8 @@ target_emissions |>
 ```
 
 ```{r}
+#| label: scatterplot-oil
+
 target_emissions |>
   ggplot(
     aes(x = Year, 
@@ -136,18 +140,24 @@ target_emissions |>
 ```
 
 ```{r}
+#| label: mean-coal
+
 target_emissions |>
  group_by(Country.Name) |>
  summarise(mean_coal = mean(Emissions.Production.CO2.Coal))
 ```
 
 ```{r}
+#| label: mean-gas
+
 target_emissions |>
  group_by(Country.Name) |>
  summarise(mean_gas = mean(Emissions.Production.CO2.Gas))
 ```
 
 ```{r}
+#| label: mean-oil
+
 target_emissions |>
  group_by(Country.Name) |>
  summarise(mean_oil = mean(Emissions.Production.CO2.Oil))
