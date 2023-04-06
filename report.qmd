@@ -11,10 +11,29 @@ Data 2
 
 **- Introduction and data**
 
+Climate change is one of the most pressing issues facing the world today, and global emissions are a major driver of this phenomenon. As human activities continue to release greenhouse gasses into the atmosphere, the Earth's temperature is rising at an unprecedented rate. Consequently, a host of negative consequences such as sea level rise, more frequent and severe weather events, and ecosystem disruption have risen. Fossil fuels are undoubtedly the largest contributor to global climate change. In fact fossil fuels, which include coal, oil and gas account for over 75 percent of global greenhouse gas emissions and nearly 90 per cent of all carbon dioxide emissions. Climate change is widely regarded as the biggest issue we will face; its far reaching effects on the environment and human society pose significant challenges for present and future generations. Considering greenhouse gasses, and consequently fossil fuels are the largest contributor to this acceleration, urgent action is required to reduce our reliance on these energy sources. For these reasons, we have decided to surface the unignorable climate change crisis by delving deeper into the issue of global emissions, particularly fossil fuel usage.
+
+The research question being explored is "Which industry between coal, gas, and oil in India, China, and USA creates the most CO2 emission production from 1992 to 2018?" We have chosen to focus on these three countries as they are the top 3 contributors to global emissions. Together, China, the US, and India contribute to nearly half of the global greenhouse gas emissions. In 2019, China contributed 27%, the US contributed 11%, and India contributed 6.6%. The research question will look at these three specified countries and compare over time which industry (coal, gas or oil) in each country releases the most and least CO2 emission and if the industry adding the most CO2 to the atmosphere changes for each country over time. The hypothesis is that because the three countries are in different stages of development, India and China will have coal as the industry causing the most CO2 emission and USA will have oil as the industry emitting the most CO2.
+
+To answer our research question we will be utilizing data from the CORGIS data set. The data set was created by Sam Donald, and was created on September 23, 2022. The observations of this data set compare various countries and regions in relation to overall emission trends. The data set also compares what industry such as coal, gas, etc is responsible for these emissions and how much each industry adds to a specific emission type. The variables from this data set that are involved in our research question are "Emissions.Production.CO2.Coal", "Emissions.Production.CO2.Gas", and "Emissions.Production.CO2.Oil" All of these variables are quantitative variables. Each row of the data represents a different country with a year between 1992 and 2018 in chronological order. The response variables in this research question are the amount of CO2 emissions produced by the coal, gas, and oil industries ("Emissions.Production.CO2.Coal", "Emissions.Production.CO2.Gas", and "Emissions.Production.CO2.Oil") in India, China, and the USA from 1992 to 2018. The variable is quantitative and continuous, as it measures the amount of CO2 emissions produced by each industry in each country over a period of time.
+
+To our knowledge, there are not any glaring ethical concerns regarding the collection of this data. Privacy breaches are a potential ethical concern, as research regarding energy and emissions may include sensitive information about individuals. However, our data does not include such metrics. It focuses on countries and industries, opposed to individuals so this is not a concern. It is also important to know that bias in data collection could pose ethical concern. Although, to our knowledge Sam Donald does not have any vested interests or ties to certain organizations or companies that would skew the data.
+
+Literature Review: Find one published credible article on the topic you are interested in researching. https://ecowarriorprincess.net/2018/04/carbon-intensive-industries-industry-sectors-emit-the-most-carbon/ Provide a one paragraph summary about the article. CO2 is by far one of the most harmful greenhouse gasses emitted that humans have increased. The article cites how "human activity is responsible for adding as much as 110.5 million tons of carbon dioxide daily into the atmosphere" from various industries. The article explains how the top 5 most carbon intensive industries are energy production, agriculture, industry, transport, and residential sector. It also explains how in different parts of the world these industries vary in degree of carbon production. Energy production to power homes, offices, etc from fossil fuels adds greatly to CO2 production. The article discusses the global distribution by sector and how it depends on coal, natural gas, and oil but not how they differ independently. In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+Our research question is different than the article cited because our research question aspires to split up the industries as well as three countries in three different stages of development to then explore which country adds the most or least to CO2 emissions by which industry. Essentially, we seek to explore with more specificity which industries depending on the stage of development of the country add to CO2 emissions instead of only in a global point of view that the article does.
+
+Sources:
+
+https://rhg.com/research/chinas-emissions-surpass-developed-countries/
+
+https://www.un.org/en/climatechange/science/causes-effects-climate-change#:\~:text=Fossil%20fuels%20%E2%80%93%20coal%2C%20oil%20and,they%20trap%20the%20sun's%20heat.
+
+**Methodology:**
+
 ```{r}
 library(tidyverse)
 ```
-
 
 ```{r}
 global_emissions <- read_csv("data/global_emissions.csv")
@@ -86,6 +105,3 @@ target_emissions |>
  group_by(Country.Name) |>
  summarise(mean_oil = mean(Emissions.Production.CO2.Oil))
 ```
-
-
-
