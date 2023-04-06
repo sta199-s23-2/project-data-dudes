@@ -39,22 +39,6 @@ Research Question:
 
 -   The variables involved in this research question are Age, Approaches, Indifferent, and Runs from. These are all categorical variables. The latter three variables all describe behavior around humans.
 
-```{r}
-library(tidyverse)
-```
-
-```{r}
-squirrel_age <- squirrel |>
-  filter(!is.na(Age), Age != "?") |>
-  select(Age, Approaches, Indifferent, `Runs from`)
-```
-
-```{r}
-squirrel_age |>
-  ggplot(aes(x = Age, fill = `Runs from`)) +
-  geom_bar(position = "fill")
-```
-
 \## Literature
 
 \- Find one published credible article on the topic you are interested in researching.
@@ -92,6 +76,11 @@ Are you going to include other variables to "account" for them? If so, what are 
 -----------------------------------------------------------------------------------------------------
 
 New Project:
+
+```{r}
+library(tidyverse)
+```
+
 
 ```{r}
 global_emissions <- read_csv("data/global_emissions.csv")
