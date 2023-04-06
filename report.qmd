@@ -97,11 +97,15 @@ global_emissions <- read_csv("data/global_emissions.csv")
 ```
 
 ```{r}
+#| label: filter-data
+
 target_emissions <- global_emissions |>
   filter(Country.Name %in% c("India", "United States", "China"))
 ```
 
 ```{r}
+#| label: scatterplot-emissions
+
 target_emissions |>
   ggplot(
     aes(x = Year, 
