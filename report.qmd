@@ -88,3 +88,63 @@ What are you finding out?
 What are you going to do with missing information? Does your response variable only have 2 levels? If not, how will you make sure it does?
 
 Are you going to include other variables to "account" for them? If so, what are they? Why?
+
+-----------------------------------------------------------------------------------------------------
+
+New Project:
+
+```{r}
+global_emissions <- read_csv("data/global_emissions.csv")
+```
+```{r}
+target_emissions <- global_emissions |>
+  filter(Country.Name %in% c("India", "United States", "China"))
+```
+
+```{r}
+target_emissions |>
+  ggplot(
+    aes(x = Year, 
+        y = Emissions.Production.CO2.Coal,
+        color = Country.Name)
+  ) +
+  geom_point()
+```
+```{r}
+target_emissions |>
+  ggplot(
+    aes(x = Year, 
+        y = Emissions.Production.CO2.Gas,
+        color = Country.Name)
+  ) +
+  geom_point()
+```
+
+```{r}
+target_emissions |>
+  ggplot(
+    aes(x = Year, 
+        y = Emissions.Production.CO2.Oil,
+        color = Country.Name)
+  ) +
+  geom_point()
+```
+
+```{r}
+target_emissions |>
+ group_by(Country.Name) |>
+ summarise(mean_coal = mean(Emissions.Production.CO2.Coal))
+```
+
+```{r}
+target_emissions |>
+ group_by(Country.Name) |>
+ summarise(mean_gas = mean(Emissions.Production.CO2.Gas))
+```
+
+```{r}
+target_emissions |>
+ group_by(Country.Name) |>
+ summarise(mean_oil = mean(Emissions.Production.CO2.Oil))
+```
+
