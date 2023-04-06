@@ -39,6 +39,7 @@ Research Question:
 
 -   The variables involved in this research question are Age, Approaches, Indifferent, and Runs from. These are all categorical variables. The latter three variables all describe behavior around humans.
 
+<<<<<<< HEAD
 ```{r}
 library(tidyverse)
 ```
@@ -56,6 +57,8 @@ squirrel_age |>
 ```
 
 \## Literature
+=======
+>>>>>>> a72467f0037684f28bd2d4280705da005aee7cf9
 
 \- Find one published credible article on the topic you are interested in researching.
 
@@ -84,3 +87,81 @@ What are you finding out?
 What are you going to do with missing information? Does your response variable only have 2 levels? If not, how will you make sure it does?
 
 Are you going to include other variables to "account" for them? If so, what are they? Why?
+<<<<<<< HEAD
+=======
+
+------------------------------------------------------------------------
+
+New Project:
+
+```{r}
+global_emissions <- read_csv("data/global_emissions.csv")
+```
+
+```{r}
+#| label: filter-data
+
+target_emissions <- global_emissions |>
+  filter(Country.Name %in% c("India", "United States", "China"))
+```
+
+```{r}
+#| label: scatterplot-coal
+
+target_emissions |>
+  ggplot(
+    aes(x = Year, 
+        y = Emissions.Production.CO2.Coal,
+        color = Country.Name)
+  ) +
+  geom_point()
+```
+
+```{r}
+#| label: scatterplot-gas
+
+target_emissions |>
+  ggplot(
+    aes(x = Year, 
+        y = Emissions.Production.CO2.Gas,
+        color = Country.Name)
+  ) +
+  geom_point()
+```
+
+```{r}
+#| label: scatterplot-oil
+
+target_emissions |>
+  ggplot(
+    aes(x = Year, 
+        y = Emissions.Production.CO2.Oil,
+        color = Country.Name)
+  ) +
+  geom_point()
+```
+
+```{r}
+#| label: mean-coal
+
+target_emissions |>
+ group_by(Country.Name) |>
+ summarise(mean_coal = mean(Emissions.Production.CO2.Coal))
+```
+
+```{r}
+#| label: mean-gas
+
+target_emissions |>
+ group_by(Country.Name) |>
+ summarise(mean_gas = mean(Emissions.Production.CO2.Gas))
+```
+
+```{r}
+#| label: mean-oil
+
+target_emissions |>
+ group_by(Country.Name) |>
+ summarise(mean_oil = mean(Emissions.Production.CO2.Oil))
+```
+>>>>>>> a72467f0037684f28bd2d4280705da005aee7cf9
