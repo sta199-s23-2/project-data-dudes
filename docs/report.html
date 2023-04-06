@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -75,19 +138,19 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html">TEAM NAME</a>
-  </li>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./proposal.html">Proposal</a>
-  </li>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./presentation.pdf">Presentation</a>
-  </li>
+  </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./report.html" aria-current="page">Report</a>
-  </li>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html">About</a>
-  </li>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -99,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -114,66 +177,120 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
-
-
+    
+    
   </div>
-
+  
 
 </header>
 
-<p>Data 1</p>
+<p>Data 2</p>
 <p><strong>- Introduction and data</strong></p>
-<p>- Identify the source of the data.</p>
-<ul>
-<li>This data was taken from NYC OpenData</li>
-</ul>
-<p>- State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p>
-<ul>
-<li>This data was originally collected in 2018 as a part of The Squirrel Census. It was collected by volunteer “squirrel sighters” who observed hundreds of squirrels.</li>
-</ul>
-<p>- Write a brief description of the observations.</p>
-<ul>
-<li><p>Each observation in this dataset represents one squirrel sighting. The data contains info on the location and time the squirrel was sighted, what it was doing, what sounds it was making, and many other things.</p></li>
-<li></li>
-</ul>
-<p><strong>- Methodology</strong></p>
-<p>Research Question:</p>
-<ul>
-<li>Are juvenile squirrels friendlier to humans than adult squirrels? In other words, does age affect the social behavior of squirrels?</li>
-</ul>
-<p>- A description of the research topic along with a concise statement of your hypotheses on this topic.</p>
-<ul>
-<li>The research topic is about friendliness, innocence, and age in squirrels. We predict that younger squirrels will be less friendly around humans because they have not yet learned that these humans are largely harmless and (at times) give food. We predict this because we can observe this behavior in younger humans since younger kids tend to be less informed about their surroundings, and therefore will lean towards being more cautious of things. We would have to look into this data to confirm any of these predictions. The complete opposite of this prediction might be true.</li>
-</ul>
-<p>- Identify the types of variables in your research question. Categorical? Quantitative?</p>
-<ul>
-<li>The variables involved in this research question are Age, Approaches, Indifferent, and Runs from. These are all categorical variables. The latter three variables all describe behavior around humans.</li>
-</ul>
-<p>## Literature</p>
-<p>- Find one published credible article on the topic you are interested in researching.</p>
-<ul>
-<li>https://www.purchase.edu/live/files/2328-scalice-benson-and-howard-2018pdf</li>
-</ul>
-<p>- Provide a one paragraph summary about the article.</p>
-<ul>
-<li>This is an article about research conducted at the SUNY Purchase College in Westchester, NY about how squirrels have become increasingly tolerant toward a human presence. In their study, they sampled a total of 20 squirrels, 10 of which were taken from an urban environment, and 10 of which were taken from a rural environment. The data collected in this study found that urban squirrels were able to tolerate a smaller distance between them and a human presence than rural squirrels. It was also observed that the time it took a squirrel to react to the human presence was more delayed for the urban squirrels than the rural squirrels. This study shows a certain level of adaptability and behavior adjustment that squirrels experience depending on their environment. This article certainly leads to further questions like our research question about when this behavior is learned and what factors into this adaptation.</li>
-</ul>
-<p>- In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p>
-<ul>
-<li>Our research question builds on the research conducted in this article because it questions if this adaptation and tolerance of a human presence is different for older and younger squirrels. Using The Squirrel Census, we can compare the behaviors toward humans for juvenile and adult squirrels.</li>
-</ul>
-<p><strong>- Results</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.4.0      ✔ purrr   1.0.0 
+✔ tibble  3.1.8      ✔ dplyr   1.0.10
+✔ tidyr   1.2.1      ✔ stringr 1.5.0 
+✔ readr   2.1.3      ✔ forcats 0.5.2 
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>global_emissions <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/global_emissions.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 2484 Columns: 20
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr  (2): Country.Name, Country.Code
+dbl (18): Year, Country.GDP, Country.Population, Emissions.Production.CH4, E...
 
-<p>Our research question is aimed at finding</p>
-<p>What are you finding out?</p>
-<ul>
-<li>Are juvenile squirrels friendlier to humans than adult squirrels? In other words, does age affect the social behavior of squirrels?</li>
-</ul>
-<p>– Make sure that this is connected to your research question. It is easy to get excited and explore your data set. Make sure that all results you generate are in-line with the research question you have asked.</p>
-<p><strong>- W+F</strong></p>
-
-<p>What are you going to do with missing information? Does your response variable only have 2 levels? If not, how will you make sure it does?</p>
-<p>Are you going to include other variables to “account” for them? If so, what are they? Why?</p>
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>target_emissions <span class="ot">&lt;-</span> global_emissions <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Country.Name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"India"</span>, <span class="st">"United States"</span>, <span class="st">"China"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>target_emissions <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> Year, </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> Emissions.Production.CO2.Coal,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> Country.Name)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/scatterplot-coal-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>target_emissions <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> Year, </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> Emissions.Production.CO2.Gas,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> Country.Name)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/scatterplot-gas-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>target_emissions <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> Year, </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> Emissions.Production.CO2.Oil,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> Country.Name)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/scatterplot-oil-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>target_emissions <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">group_by</span>(Country.Name) <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">summarise</span>(<span class="at">mean_coal =</span> <span class="fu">mean</span>(Emissions.Production.CO2.Coal))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  Country.Name  mean_coal
+  &lt;chr&gt;             &lt;dbl&gt;
+1 China             4651.
+2 India              873.
+3 United States     1924.</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>target_emissions <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">group_by</span>(Country.Name) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">summarise</span>(<span class="at">mean_gas =</span> <span class="fu">mean</span>(Emissions.Production.CO2.Gas))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  Country.Name  mean_gas
+  &lt;chr&gt;            &lt;dbl&gt;
+1 China            164. 
+2 India             71.9
+3 United States   1286. </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>target_emissions <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">group_by</span>(Country.Name) <span class="sc">|&gt;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">summarise</span>(<span class="at">mean_oil =</span> <span class="fu">mean</span>(Emissions.Production.CO2.Oil))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  Country.Name  mean_oil
+  &lt;chr&gt;            &lt;dbl&gt;
+1 China             871.
+2 India             381.
+3 United States    2329.</code></pre>
+</div>
+</div>
 
 
 
@@ -197,7 +314,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       toggleBodyColorMode(bsSheetEl);
     }
   }
-  toggleBodyColorPrimary();
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -241,7 +358,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       theme: 'quarto',
       placement: 'bottom-start'
     };
-    window.tippy(el, config);
+    window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
   for (var i=0; i<noterefs.length; i++) {
