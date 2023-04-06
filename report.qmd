@@ -86,13 +86,16 @@ What are you going to do with missing information? Does your response variable o
 
 Are you going to include other variables to "account" for them? If so, what are they? Why?
 
------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 New Project:
 
 ```{r}
+#| label: read-data
+
 global_emissions <- read_csv("data/global_emissions.csv")
 ```
+
 ```{r}
 target_emissions <- global_emissions |>
   filter(Country.Name %in% c("India", "United States", "China"))
@@ -107,6 +110,7 @@ target_emissions |>
   ) +
   geom_point()
 ```
+
 ```{r}
 target_emissions |>
   ggplot(
@@ -144,4 +148,3 @@ target_emissions |>
  group_by(Country.Name) |>
  summarise(mean_oil = mean(Emissions.Production.CO2.Oil))
 ```
-
