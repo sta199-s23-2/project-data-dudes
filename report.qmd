@@ -39,6 +39,26 @@ Research Question:
 
 -   The variables involved in this research question are Age, Approaches, Indifferent, and Runs from. These are all categorical variables. The latter three variables all describe behavior around humans.
 
+<<<<<<< HEAD
+```{r}
+library(tidyverse)
+```
+
+```{r}
+squirrel_age <- squirrel |>
+  filter(!is.na(Age), Age != "?") |>
+  select(Age, Approaches, Indifferent, `Runs from`)
+```
+
+```{r}
+squirrel_age |>
+  ggplot(aes(x = Age, fill = `Runs from`)) +
+  geom_bar(position = "fill")
+```
+
+\## Literature
+=======
+>>>>>>> a72467f0037684f28bd2d4280705da005aee7cf9
 
 \- Find one published credible article on the topic you are interested in researching.
 
@@ -67,6 +87,8 @@ What are you finding out?
 What are you going to do with missing information? Does your response variable only have 2 levels? If not, how will you make sure it does?
 
 Are you going to include other variables to "account" for them? If so, what are they? Why?
+<<<<<<< HEAD
+=======
 
 ------------------------------------------------------------------------
 
@@ -144,3 +166,4 @@ target_emissions |>
  group_by(Country.Name) |>
  summarise(mean_oil = mean(Emissions.Production.CO2.Oil))
 ```
+>>>>>>> a72467f0037684f28bd2d4280705da005aee7cf9
