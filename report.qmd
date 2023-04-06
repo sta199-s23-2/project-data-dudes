@@ -1,5 +1,5 @@
 ---
-title: "Project: Social Squirrels"
+title: "Project: Global Emissions"
 subtitle: "Report"
 format: html
 editor: visual
