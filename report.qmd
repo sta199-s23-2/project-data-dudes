@@ -175,12 +175,14 @@ model_oil <- linear_reg() |>
 predict(model_oil, data.frame(Year = 2050, Country.Name = "United States"))
 
 ```
+
 ```{r}
 #| label: model_oil_predict_india
 
 predict(model_oil, data.frame(Year = 2050, Country.Name = "India"))
 
 ```
+
 ```{r}
 #| label: model_oil_predict_china
 
