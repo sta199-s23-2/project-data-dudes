@@ -255,9 +255,10 @@ target_emissions |>
   facet_wrap(~ Country.Name, scales = "free_y") + 
   labs( 
     title = "Percentage of Total CO2 Emissions from Coal vs GDP By Country (1992-2018", 
-    x = "Country's Gross Domestic Product for a given year", 
+    x = "Country's Gross Domestic Product for a Given Year", 
     y = "Percentage of Total CO2 Emissions from Coal (Metric Tonns Per Capita)", 
     color = "Country") +
   theme(plot.title = element_text(size = 11), 
-        axis.title = element_text(size = 10))
-
+        axis.title = element_text(size = 10), 
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+```
