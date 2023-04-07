@@ -30,7 +30,6 @@ https://rhg.com/research/chinas-emissions-surpass-developed-countries/
 https://www.un.org/en/climatechange/science/causes-effects-climate-change#:\~:text=Fossil%20fuels%20%E2%80%93%20coal%2C%20oil%20and,they%20trap%20the%20sun's%20heat.
 
 **Methodology:**
-
 ```{r}
 library(tidyverse)
 library(tidymodels)
@@ -130,7 +129,6 @@ linear_reg() |>
   pull(r.squared)
 
 ```
-
 
 ```{r}
 #| label: mean-coal
