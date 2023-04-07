@@ -4,10 +4,15 @@ format: html
 editor: visual
 ---
 
-This project was developed by **\[team name\]** For [STA 199: Introduction to Data Science](https://sta199-s23-2.github.io/) at Duke University. The team is comprised of the following team members.
+This project was developed by **Data Dudes** For [STA 199: Introduction to Data Science](https://sta199-s23-2.github.io/) at Duke University. The team is comprised of the following team members.
 
--   Team member 1: One sentence description of Team member 1 (e.g., year, major, etc.).
--   Team member 2: One sentence description of Team member 2 (e.g., year, major, etc.).
--   Team member 3: One sentence description of Team member 3 (e.g., year, major, etc.).
--   Team member 4: One sentence description of Team member 4 (e.g., year, major, etc.).
--   ...
+Luke Flyer: 
+    As member of the Class of 2026, Flyer is an Undecided Major and he enjoys statistical studies.
+Mahika Jammula:
+    As member of the Class of 2025, Jammula is a Neuroscience Major and she is interested in pursuing the pre-med track.
+Caprice Seeman:
+    As member of the Class of 2025, Seeman is a Marine Science Conservation and Public Policy Major and she enjoys studying conservation of the environment.
+Skylar Webb:
+    As member of the Class of 2025, Webb is a Global Health and Enviromental Science and Policy Major and she enjoys learning about the human impacts on the environment.
+Katherine Wiest:
+    As member of the Class of 2025, Wiest is a Biology and Italian Major and she is interested in pursuing anything stem.
