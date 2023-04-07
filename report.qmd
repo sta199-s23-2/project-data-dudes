@@ -9,7 +9,7 @@ execute:
 
 Project - Global Emissions
 
-**- Introduction and data**
+**Introduction and data**
 
 Climate change is one of the most pressing issues facing the world today, and global emissions are a major driver of this phenomenon. As human activities continue to release greenhouse gasses into the atmosphere, the Earth's temperature is rising at an unprecedented rate. Consequently, a host of negative consequences such as sea level rise, more frequent and severe weather events, and ecosystem disruption have risen. Fossil fuels are undoubtedly the largest contributor to global climate change. In fact fossil fuels, which include coal, oil and gas account for over 75 percent of global greenhouse gas emissions and nearly 90 per cent of all carbon dioxide emissions. Climate change is widely regarded as the biggest issue we will face; its far reaching effects on the environment and human society pose significant challenges for present and future generations. Considering greenhouse gasses, and consequently fossil fuels are the largest contributor to this acceleration, urgent action is required to reduce our reliance on these energy sources. For these reasons, we have decided to surface the unignorable climate change crisis by delving deeper into the issue of global emissions, particularly fossil fuel usage.
 
@@ -29,7 +29,7 @@ https://rhg.com/research/chinas-emissions-surpass-developed-countries/
 
 https://www.un.org/en/climatechange/science/causes-effects-climate-change#:\~:text=Fossil%20fuels%20%E2%80%93%20coal%2C%20oil%20and,they%20trap%20the%20sun's%20heat.
 
-**- Methodology**
+**Methodology**
 
 ```{r}
 library(tidyverse)
@@ -217,7 +217,7 @@ target_emissions |>
 
 ```
 
-**- Results**
+**Results**
 
 The project explored coal, gas, and oil consumption by three countries - China, India, and the United States. These three countries are at three different points in their development and the data contributes to this point. For coal, China has the greatest consumption by a significant amount and this value continues to grow in recent time with over 6000 metric tons per capita. In the past, the United States has had more consumption than India but in recent years, they have flipped in consumption level. Now, the United States has reduced its consumption of coal and is slightly under India's consumption at around 1000 metric tons per capita.
 
