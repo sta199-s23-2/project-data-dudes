@@ -69,17 +69,30 @@ target_emissions |>
 
 model_coal <- linear_reg() |>
   set_engine("lm") |>
-  fit(Emissions.Production.CO2.Coal ~ Year, data = target_emissions) |>
-  glance() |>
-  pull(r.squared)
+  fit(Emissions.Production.CO2.Coal ~ Year * Country.Name, data = target_emissions)
 
 ```
 
 ```{r}
+#| label: model_coal_predict_unitedstates
 
-predict(model_coal, data.frame(Year = 2050, Country.Name = "Untied States"))
+predict(model_coal, data.frame(Year = 2050, Country.Name = "United States"))
+
 ```
 
+```{r}
+#| label: model_coal_predict_india
+
+predict(model_coal, data.frame(Year = 2050, Country.Name = "India"))
+
+```
+
+```{r}
+#| label: model_coal_predict_china
+
+predict(model_coal, data.frame(Year = 2050, Country.Name = "China"))
+
+```
 
 ```{r}
 #| label: scatterplot-gas
@@ -104,26 +117,29 @@ target_emissions |>
 
 model_gas <- linear_reg() |>
   set_engine("lm") |>
-  fit(Emissions.Production.CO2.Gas ~ Year, data = target_emissions) 
+  fit(Emissions.Production.CO2.Gas ~ Year * Country.Name, data = target_emissions) 
 
 ```
 
 ```{r}
-#| label: model_gas_predict
+#| label: model_gas_predict_unitedstates
 
-predict(model_gas, data.frame(Year = 2050, Country.Name = "Untied States"))
-
+predict(model_gas, data.frame(Year = 2050, Country.Name = "United States"))
 
 ```
 ```{r}
+#| label: model_gas_predict_india
+
 predict(model_gas, data.frame(Year = 2050, Country.Name = "India"))
 
 ```
 
 ```{r}
-predict(model_gas, data.frame(Year = 2050, Country.Name = "China"))
-```
+#| label: model_gas_predict_china
 
+predict(model_gas, data.frame(Year = 2050, Country.Name = "China"))
+
+```
 
 ```{r}
 #| label: scatterplot-oil
@@ -146,11 +162,28 @@ target_emissions |>
 ```{r}
 #| label: scatterplot-oil-r^2
 
-linear_reg() |>
+model_oil <- linear_reg() |>
   set_engine("lm") |>
-  fit(Emissions.Production.CO2.Oil ~ Year, data = target_emissions) |>
-  glance() |>
-  pull(r.squared)
+  fit(Emissions.Production.CO2.Oil ~ Year * Country.Name, data = target_emissions)
+
+```
+
+```{r}
+#| label: model_oil_predict_unitedstates
+
+predict(model_oil, data.frame(Year = 2050, Country.Name = "United States"))
+
+```
+```{r}
+#| label: model_oil_predict_india
+
+predict(model_oil, data.frame(Year = 2050, Country.Name = "India"))
+
+```
+```{r}
+#| label: model_oil_predict_china
+
+predict(model_oil, data.frame(Year = 2050, Country.Name = "China"))
 
 ```
 
