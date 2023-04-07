@@ -260,13 +260,14 @@ target_emissions |>
         axis.title = element_text(size = 10), 
         axis.text.x = element_text(angle = 15, vjust = 0.75, hjust = 0.5))
 ```
+
 ```{r}
 #| label: percent_total_gas
 
 target_emissions <- target_emissions |> 
   mutate(percent_total_gas= (Emissions.Production.CO2.Gas/Emissions.Production.CO2.Total) *100)
-
 ```
+
 
 ```{r}
 #| label: percent_total_gas-visual
@@ -287,6 +288,8 @@ target_emissions |>
     color = "Country") +
   theme(plot.title = element_text(size = 11), 
         axis.title = element_text(size = 10), 
-        axis.text.x = element_text(angle = 15, vjust = 0.75, hjust = 0.5))
+        axis.text.x = element_text(angle = 15, vjust = 0.75, hjust = 0.5)) 
 ```
+
+
 
