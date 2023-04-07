@@ -80,8 +80,6 @@ predict(model_coal, data.frame(Year = 2050, Country.Name = "United States"))
 
 ```
 
-<<<<<<< HEAD
-=======
 ```{r}
 #| label: model_coal_predict_india
 
@@ -96,7 +94,6 @@ predict(model_coal, data.frame(Year = 2050, Country.Name = "China"))
 
 ```
 
->>>>>>> 5b32d31473a488dffe2cc2ce5c5bb566cd13cc45
 ```{r}
 #| label: scatterplot-gas
 
@@ -120,11 +117,7 @@ target_emissions |>
 
 model_gas <- linear_reg() |>
   set_engine("lm") |>
-<<<<<<< HEAD
-  fit(Emissions.Production.CO2.Gas ~ Year, Country.Name, data = target_emissions) 
-=======
   fit(Emissions.Production.CO2.Gas ~ Year * Country.Name, data = target_emissions) 
->>>>>>> 5b32d31473a488dffe2cc2ce5c5bb566cd13cc45
 
 ```
 
@@ -145,13 +138,10 @@ predict(model_gas, data.frame(Year = 2050, Country.Name = "India"))
 ```{r}
 #| label: model_gas_predict_china
 
-<<<<<<< HEAD
-=======
 predict(model_gas, data.frame(Year = 2050, Country.Name = "China"))
 
 ```
 
->>>>>>> 5b32d31473a488dffe2cc2ce5c5bb566cd13cc45
 ```{r}
 #| label: scatterplot-oil
 
