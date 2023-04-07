@@ -223,41 +223,40 @@ The project explored coal, gas, and oil consumption by three countries - China, 
 
 For gas, the United States has the greatest consumption at over 2000 metric tons per capita. The United States was steady until 2010 and has in recent years continued to rise. The next greatest consumption of gas is China which is consistently growing over time and is currently around 500 metric tons per capita. India's consumption grew until 2010 and is slightly decreasing in recent years. India's consumption is around 125 metric tons per capita.
 
-For oil, the United States has the greatest consumption but had a slight decline around 2005 but this level has again continued to rise after the decline. The United State's consumption is around 2500 metric tons per capita. China is the next highest around 1500 metric tons per capita and India's consumption is around 600 metric tons per capita.
+For oil, the United States has the greatest consumption but had a slight decline around 2005 but this level has again continued to rise after the decline. The United State's consumption is around 2500 metric tons per capita. China is the next highest at around 1500 metric tons per capita and India's consumption is around 600 metric tons per capita.
 
 The mean coal consumption for coal in China, India, and the United States respectively are 4651, 872, and 1923 metric tons per capita. The mean gas consumption for coal in China, India, and the United States respectively are 164, 71, and 1285 metric tons per capita. The mean oil consumption for coal in China, India, and the United States respectively are 871, 380, and 2328 metric tons per capita.
 
-In general, India is growing the fastest in consumption for all three modes of energy. We suggest that since the United States is a greater stage of development now to start using more alternative energy forms and renewable forms of energy. The slight steadiness in the trend lines of the United States support this idea along with the subtle declines present in coal and oil.
-
 By conducting a linear regression model on the data, we were able to make predictions about each country's consumption of coal, gas, and oil in the year 2050. For coal by 2050, we predict that the United States will consume 956 metric tons per capita, while India consumes 3079 metric tons per capita, and China consumes 16,214 metric tons per capita. For gas by 2050, we predict that the United States will consume 1967 metric tons per capita, while India consumes 265 metric tons per capita, and China will consume 934 metric tons per capita. For oil by 2050, we predict that the United States will consume 2297 metric tons per capita, while India consumes 1144 metric tons per capita, and China consumes 2772 metric tons per capita.
 
-In general, India and China are growing the fastest in consumption for coal which supports our hypothesis. By 2050, these two countries would be consuming over 19000 metric tons per capita in coal with China contributing over 85%. For gas, the United States will remain a majority consumer but the India and China will grow more dramtically by consuming over 1100 metric tons per capita. For oil, India and China will consume over 3900 metric tons per capita. China consumes more than India in all three forms and over consumes the United States in all by gas. The United States over consumes India in all but coal. Essentially for coal, in order of greatest to least consumption, the country order is China, India, and the United States. For gas, in order of greatest to least consumption, the country order, is United States, China, and India. For oil, in order of greatest to least consumption, the country order, is China, United States, India. We suggest that since the United States is a greater stage of development, they should start using more alternative energy forms and renewable forms of energy. The slight steadiness in the trend lines of the United States support this idea along with the subtle declines present in coal and oil.
-
+In general, India and China are growing the fastest in consumption for coal which supports our hypothesis. By 2050, these two countries would be consuming over 19000 metric tons per capita in coal with China contributing over 85%. For gas, the United States will remain a majority consumer but India and China will grow more dramatically by consuming over 1100 metric tons per capita. For oil, India and China will consume over 3900 metric tons per capita. China consumes more than India in all three forms and over consumes the United States in all by gas. The United States over consumes India in all but coal. Essentially for coal, in order of greatest to least consumption, the country order is China, India, and the United States. For gas, in order of greatest to least consumption, the country order is United States, China, and India. For oil, in order of greatest to least consumption, the country order is China, United States, India. We suggest that since the United States is at a greater stage of development, they should start using more alternative energy forms and renewable forms of energy. The slight steadiness in the trend lines of the United States support this idea along with the subtle declines present in coal and oil.
 
 ```{r}
-# l label:percent_total_coal
+#| label: percent_total_coal
 
 target_emissions <- target_emissions |> 
   mutate(percent_total_coal= (Emissions.Production.CO2.Coal/Emissions.Production.CO2.Total) *100)
+
 ```
 
-
 ```{r}
-# l label:percent_total_coal-visual
+#| label: percent_total_coal-visual
 
 target_emissions |> 
   ggplot(
     aes(x = Country.GDP, 
         y = percent_total_coal, 
-        color = Country.Name)) + 
-      geom_point() + 
+        color = Country.Name)
+    ) + 
+  geom_point() + 
   geom_smooth(se = FALSE) + 
   facet_wrap(~ Country.Name, scales = "free_y") + 
   labs( 
     title = "Percentage of Total CO2 Emissions from Coal vs GDP By Country (1992-2018", 
     x = "Country's Gross Domestic Product for a given year", 
-    y = "Percentage of Total CO2 Emissions from Coal (Metric Tonns Per Capita)", 
+    y = "% of Total CO2 Emissions from Coal (Metric Tons Per Capita)", 
     color = "Country") +
   theme(plot.title = element_text(size = 11), 
         axis.title = element_text(size = 10))
 
+```
