@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -24,7 +29,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="m\quarto:offset" content="./">
+<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,19 +75,19 @@ ul.task-list{list-style: none;}
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html">TEAM NAME</a>
-  </li>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./proposal.html">Proposal</a>
-  </li>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./presentation.pdf">Presentation</a>
-  </li>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./report.html">Report</a>
-  </li>
+  </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./about.html" aria-current="page">About</a>
-  </li>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -94,7 +99,7 @@ ul.task-list{list-style: none;}
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -108,26 +113,15 @@ ul.task-list{list-style: none;}
 
 <div class="quarto-title-meta">
 
-
-
+    
+    
   </div>
-
+  
 
 </header>
 
 <p>This project was developed by <strong>Data Dudes</strong> For <a href="https://sta199-s23-2.github.io/">STA 199: Introduction to Data Science</a> at Duke University. The team is comprised of the following team members.</p>
-<ul>
-<li>Luke Flyer:
-    As member of the Class of 2026, Flyer is an Undecided Major and he enjoys statistical studies. </li>
-<li>Mahika Jammula:
-    As member of the Class of 2025, Jammula is a Neuroscience Major and she is interested in pursuing the pre-med track. </li>
-<li>Caprice Seeman:
-    As member of the Class of 2025, Seeman is a Marine Science Conservation and Public Policy Major and she enjoys studying conservation of the environment. </li>
-<li>Skylar Webb:
-    As member of the Class of 2025, Webb is a Global Health and Enviromental Science and Policy Major and she enjoys learning about the human impacts on the environment.</li>
-<li>Katherine Wiest:
-    As member of the Class of 2025, Wiest is a Biology and Italian Major and she is interested in pursuing anything stem.</li>
-</ul>
+<p>Luke Flyer: As member of the Class of 2026, Flyer is an Undecided Major and he enjoys statistical studies. Mahika Jammula: As member of the Class of 2025, Jammula is a Neuroscience Major and she is interested in pursuing the pre-med track. Caprice Seeman: As member of the Class of 2025, Seeman is a Marine Science Conservation and Public Policy Major and she enjoys studying conservation of the environment. Skylar Webb: As member of the Class of 2025, Webb is a Global Health and Enviromental Science and Policy Major and she enjoys learning about the human impacts on the environment. Katherine Wiest: As member of the Class of 2025, Wiest is a Biology and Italian Major and she is interested in pursuing anything stem.</p>
 
 
 
@@ -151,7 +145,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       toggleBodyColorMode(bsSheetEl);
     }
   }
-  toggleBodyColorPrimary();
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -195,13 +189,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       theme: 'quarto',
       placement: 'bottom-start'
     };
-    window.tippy(el, config);
+    window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
