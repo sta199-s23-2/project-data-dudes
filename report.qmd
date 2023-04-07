@@ -135,6 +135,7 @@ target_emissions |>
 target_emissions |>
  group_by(Country.Name) |>
  summarise(mean_gas = mean(Emissions.Production.CO2.Gas))
+
 ```
 
 ```{r}
@@ -143,6 +144,7 @@ target_emissions |>
 target_emissions |>
  group_by(Country.Name) |>
  summarise(mean_oil = mean(Emissions.Production.CO2.Oil))
+
 ```
 
 **- Results**
