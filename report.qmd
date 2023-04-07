@@ -33,9 +33,8 @@ https://www.un.org/en/climatechange/science/causes-effects-climate-change#:\~:te
 
 ```{r}
 library(tidyverse)
-```
+library(tidymodels)
 
-```{r}
 global_emissions <- read_csv("data/global_emissions.csv")
 ```
 
@@ -44,6 +43,7 @@ global_emissions <- read_csv("data/global_emissions.csv")
 
 target_emissions <- global_emissions |>
   filter(Country.Name %in% c("India", "United States", "China"))
+
 ```
 
 ```{r}
@@ -55,7 +55,20 @@ target_emissions |>
         y = Emissions.Production.CO2.Coal,
         color = Country.Name)
   ) +
-  geom_point()
+  geom_point() +
+  geom_smooth(method = "lm" , se = F)
+
+```
+
+```{r}
+#| label: scatterplot-coal-r^2
+
+linear_reg() |>
+  set_engine("lm") |>
+  fit(Emissions.Production.CO2.Coal ~ Year, data = target_emissions) |>
+  glance() |>
+  pull(r.squared)
+
 ```
 
 ```{r}
@@ -67,7 +80,19 @@ target_emissions |>
         y = Emissions.Production.CO2.Gas,
         color = Country.Name)
   ) +
-  geom_point()
+  geom_point() +
+  geom_smooth(method = "lm" , se = F)
+
+```
+```{r}
+#| label: scatterplot-gas-r^2
+
+linear_reg() |>
+  set_engine("lm") |>
+  fit(Emissions.Production.CO2.Gas ~ Year, data = target_emissions) |>
+  glance() |>
+  pull(r.squared)
+
 ```
 
 ```{r}
@@ -79,8 +104,21 @@ target_emissions |>
         y = Emissions.Production.CO2.Oil,
         color = Country.Name)
   ) +
-  geom_point()
+  geom_point() +
+  geom_smooth(method = "lm" , se = F)
+
 ```
+```{r}
+#| label: scatterplot-oil-r^2
+
+linear_reg() |>
+  set_engine("lm") |>
+  fit(Emissions.Production.CO2.Oil ~ Year, data = target_emissions) |>
+  glance() |>
+  pull(r.squared)
+
+```
+
 
 ```{r}
 #| label: mean-coal
@@ -88,6 +126,7 @@ target_emissions |>
 target_emissions |>
  group_by(Country.Name) |>
  summarise(mean_coal = mean(Emissions.Production.CO2.Coal))
+
 ```
 
 ```{r}
