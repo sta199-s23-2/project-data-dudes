@@ -171,3 +171,33 @@ For oil, the United States has the greatest consumption but had a slight decline
 The mean coal consumption for coal in China, India, and the United States respectively are 4651, 872, and 1923 metric tons per capita. The mean gas consumption for coal in China, India, and the United States respectively are 164, 71, and 1285 metric tons per capita. The mean oil consumption for coal in China, India, and the United States respectively are 871, 380, and 2328 metric tons per capita.
 
 In general, India is growing the fastest in consumption for all three modes of energy. We suggest that since the United States is a greater stage of development now to start using more alternative energy forms and renewable forms of energy. The slight steadiness in the trend lines of the United States support this idea along with the subtle declines present in coal and oil.
+
+```{r}
+# l label:percent_total_coal
+
+target_emissions <- target_emissions |> 
+  mutate(percent_total_coal= (Emissions.Production.CO2.Coal/Emissions.Production.CO2.Total) *100)
+```
+
+
+```{r}
+# l label:percent_total_coal-visual
+
+target_emissions |> 
+  ggplot(
+    aes(x = Country.GDP, 
+        y = percent_total_coal, 
+        color = Country.Name)) + 
+      geom_point() + 
+  geom_smooth(se = FALSE) + 
+  facet_wrap(~ Country.Name, scales = "free_y") + 
+  labs( 
+    title = "Percentage of Total CO2 Emissions from Coal vs GDP By Country (1992-2018", 
+    x = "Country's Gross Domestic Product for a given year", 
+    y = "Percentage of Total CO2 Emissions from Coal (Metric Tonns Per Capita)", 
+    color = "Country") +
+  theme(plot.title = element_text(size = 11), 
+        axis.title = element_text(size = 10))
+
+```
+
