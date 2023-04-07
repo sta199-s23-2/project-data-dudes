@@ -320,8 +320,17 @@ target_emissions |>
 ```
 
 
+
+
+
+
 ```{r}
-target_emissions <- target_emissions |> 
-  mutate(gdp_chronological = )
+
+target_emissions |> 
+  ggplot(
+    aes(x = Year, 
+        y = Country.GDP, 
+        color = Country.Name)) + 
+      geom_point()
 ```
 
