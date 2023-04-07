@@ -258,7 +258,7 @@ target_emissions |>
     color = "Country") +
   theme(plot.title = element_text(size = 11), 
         axis.title = element_text(size = 10), 
-        axis.text.x = element_text(angle = 15, vjust = 0.75, hjust = 0.5))
+        axis.text.x = element_text(angle = 90, vjust = 0.75, hjust = 0.5))
 ```
 
 ```{r}
@@ -267,7 +267,6 @@ target_emissions |>
 target_emissions <- target_emissions |> 
   mutate(percent_total_gas= (Emissions.Production.CO2.Gas/Emissions.Production.CO2.Total) *100)
 ```
-
 
 ```{r}
 #| label: percent_total_gas-visual
@@ -288,8 +287,41 @@ target_emissions |>
     color = "Country") +
   theme(plot.title = element_text(size = 11), 
         axis.title = element_text(size = 10), 
-        axis.text.x = element_text(angle = 15, vjust = 0.75, hjust = 0.5)) 
+        axis.text.x = element_text(angle = 90, vjust = 0.75, hjust = 0.5))
+```
+
+```{r}
+#| label: percent_total_oil
+
+target_emissions <- target_emissions |> 
+  mutate(percent_total_oil= (Emissions.Production.CO2.Oil/Emissions.Production.CO2.Total) *100)
+```
+
+```{r}
+#| label: percent_total_oil-visual
+
+target_emissions |> 
+  ggplot(
+    aes(x = Country.GDP, 
+        y = percent_total_oil, 
+        color = Country.Name)
+    ) + 
+  geom_point() + 
+  geom_smooth(se = FALSE) + 
+  facet_wrap(~ Country.Name, scales = "free_y") + 
+  labs( 
+    title = "Percentage of Total CO2 Emissions from Oil vs GDP By Country (1992-2018)", 
+    x = "Country's Gross Domestic Product for a Given Year", 
+    y = "% of Total CO2 Emissions from Oil (Metric Tons Per Capita)", 
+    color = "Country") +
+  theme(plot.title = element_text(size = 11), 
+        axis.title = element_text(size = 10), 
+        axis.text.x = element_text(angle = 90, vjust = 0.75, hjust = 0.5))
 ```
 
 
+```{r}
+target_emissions <- target_emissions |> 
+  mutate(gdp_chronological = )
+```
 
