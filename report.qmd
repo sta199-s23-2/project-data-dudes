@@ -254,11 +254,11 @@ target_emissions |>
   labs( 
     title = "Percentage of Total CO2 Emissions from Coal vs GDP By Country (1992-2018)", 
     x = "Country's Gross Domestic Product for a Given Year", 
-    y = "Percentage of Total CO2 Emissions from Coal (Metric Tonns Per Capita)", 
+    y = "% of Total CO2 Emissions from Coal (Metric Tons Per Capita)", 
     color = "Country") +
   theme(plot.title = element_text(size = 11), 
         axis.title = element_text(size = 10), 
-        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+        axis.text.x = element_text(angle = 15, vjust = 0.75, hjust = 0.5))
 ```
 ```{r}
 #| label: percent_total_gas
@@ -283,10 +283,10 @@ target_emissions |>
   labs( 
     title = "Percentage of Total CO2 Emissions from Gas vs GDP By Country (1992-2018)", 
     x = "Country's Gross Domestic Product for a Given Year", 
-    y = "Percentage of Total CO2 Emissions from Gas (Metric Tonns Per Capita)", 
+    y = "% of Total CO2 Emissions from Gas (Metric Tons Per Capita)", 
     color = "Country") +
   theme(plot.title = element_text(size = 11), 
         axis.title = element_text(size = 10), 
-        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+        axis.text.x = element_text(angle = 15, vjust = 0.75, hjust = 0.5))
 ```
 
