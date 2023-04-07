@@ -69,7 +69,8 @@ target_emissions |>
 
 model_coal <- linear_reg() |>
   set_engine("lm") |>
-  fit(Emissions.Production.CO2.Coal ~ Year * Country.Name, data = target_emissions)
+  fit(Emissions.Production.CO2.Coal ~ Year * Country.Name, 
+      data = target_emissions)
 
 ```
 
@@ -117,7 +118,8 @@ target_emissions |>
 
 model_gas <- linear_reg() |>
   set_engine("lm") |>
-  fit(Emissions.Production.CO2.Gas ~ Year * Country.Name, data = target_emissions) 
+  fit(Emissions.Production.CO2.Gas ~ Year * Country.Name, 
+      data = target_emissions) 
 
 ```
 
@@ -165,7 +167,8 @@ target_emissions |>
 
 model_oil <- linear_reg() |>
   set_engine("lm") |>
-  fit(Emissions.Production.CO2.Oil ~ Year * Country.Name, data = target_emissions)
+  fit(Emissions.Production.CO2.Oil ~ Year * Country.Name, 
+      data = target_emissions)
 
 ```
 
@@ -320,17 +323,4 @@ target_emissions |>
 ```
 
 
-
-
-
-
-```{r}
-
-target_emissions |> 
-  ggplot(
-    aes(x = Year, 
-        y = Country.GDP, 
-        color = Country.Name)) + 
-      geom_point()
-```
 
