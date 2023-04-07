@@ -67,13 +67,19 @@ target_emissions |>
 ```{r}
 #| label: scatterplot-coal-r^2
 
-linear_reg() |>
+model_coal <- linear_reg() |>
   set_engine("lm") |>
   fit(Emissions.Production.CO2.Coal ~ Year, data = target_emissions) |>
   glance() |>
   pull(r.squared)
 
 ```
+
+```{r}
+
+predict(model_coal, data.frame(Year = 2050, Country.Name = "Untied States"))
+```
+
 
 ```{r}
 #| label: scatterplot-gas
@@ -96,13 +102,28 @@ target_emissions |>
 ```{r}
 #| label: scatterplot-gas-r^2
 
-linear_reg() |>
+model_gas <- linear_reg() |>
   set_engine("lm") |>
-  fit(Emissions.Production.CO2.Gas ~ Year, data = target_emissions) |>
-  glance() |>
-  pull(r.squared)
+  fit(Emissions.Production.CO2.Gas ~ Year, data = target_emissions) 
 
 ```
+
+```{r}
+#| label: model_gas_predict
+
+predict(model_gas, data.frame(Year = 2050, Country.Name = "Untied States"))
+
+
+```
+```{r}
+predict(model_gas, data.frame(Year = 2050, Country.Name = "India"))
+
+```
+
+```{r}
+predict(model_gas, data.frame(Year = 2050, Country.Name = "China"))
+```
+
 
 ```{r}
 #| label: scatterplot-oil
@@ -170,4 +191,4 @@ For oil, the United States has the greatest consumption but had a slight decline
 
 The mean coal consumption for coal in China, India, and the United States respectively are 4651, 872, and 1923 metric tons per capita. The mean gas consumption for coal in China, India, and the United States respectively are 164, 71, and 1285 metric tons per capita. The mean oil consumption for coal in China, India, and the United States respectively are 871, 380, and 2328 metric tons per capita.
 
-In general, India is growing the fastest in consumption for all three modes of energy. We suggest that since the United States is a greater stage of development now to start using more alternative energy forms and renewable forms of energy. The slight steadiness in the trend lines of the United States support this idea along with the subtle declines present in coal and oil.
+In general, India is growing the fastest in consumption for all three modes of energy. We suggest that the United States is a greater stage of development now to start using more alternative energy forms and renewable forms of energy. The slight steadiness in the trend lines of the United States support this idea along with the subtle declines present in coal and oil.
