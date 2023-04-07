@@ -48,6 +48,8 @@ target_emissions <- global_emissions |>
 
 ```{r}
 #| label: scatterplot-coal
+#| message: FALSE
+#| warning: FALSE
 
 target_emissions |>
   ggplot(
@@ -66,6 +68,8 @@ target_emissions |>
 
 ```{r}
 #| label: scatterplot-coal-r^2
+#| message: FALSE
+#| warning: FALSE
 
 model_coal <- linear_reg() |>
   set_engine("lm") |>
@@ -97,6 +101,8 @@ predict(model_coal, data.frame(Year = 2050, Country.Name = "China"))
 
 ```{r}
 #| label: scatterplot-gas
+#| message: FALSE
+#| warning: FALSE
 
 target_emissions |>
   ggplot(
@@ -115,6 +121,9 @@ target_emissions |>
 
 ```{r}
 #| label: scatterplot-gas-r^2
+#| message: FALSE
+#| warning: FALSE
+
 
 model_gas <- linear_reg() |>
   set_engine("lm") |>
@@ -146,6 +155,9 @@ predict(model_gas, data.frame(Year = 2050, Country.Name = "China"))
 
 ```{r}
 #| label: scatterplot-oil
+#| message: FALSE
+#| warning: FALSE
+
 
 target_emissions |>
   ggplot(
