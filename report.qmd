@@ -54,13 +54,13 @@ target_emissions |>
     aes(x = Year, 
         y = Emissions.Production.CO2.Coal,
         color = Country.Name)
-  ) +
-  labs(x = "Time (In Years)", 
+    ) +
+    labs(x = "Time (In Years)", 
        y =  "Emissions Production of Coal",
        title = "Emissions Production of Coal in Years",
        color = "Country") +
-  geom_point() +
-  geom_smooth(method = "lm" , se = F)
+    geom_point() +
+    geom_smooth(method = "lm" , se = F)
 
 ```
 
@@ -83,13 +83,13 @@ target_emissions |>
     aes(x = Year, 
         y = Emissions.Production.CO2.Gas,
         color = Country.Name)
-  ) +
-  labs(x = "Time (In Years)", 
+    ) +
+    labs(x = "Time (In Years)", 
        y =  "Emissions Production of Gas",
        title = "Emissions Production of Gas in Years",
        color = "Country") +
-  geom_point() +
-  geom_smooth(method = "lm" , se = F)
+    geom_point() +
+    geom_smooth(method = "lm" , se = F)
 
 ```
 
@@ -112,13 +112,13 @@ target_emissions |>
     aes(x = Year, 
         y = Emissions.Production.CO2.Oil,
         color = Country.Name)
-  ) +
-labs(x = "Time (In Years)", 
+    ) +
+    labs(x = "Time (In Years)", 
        y =  "Emissions Production of Oil",
        title = "Emissions Production of Oil in Years",
        color = "Country") +
-  geom_point() +
-  geom_smooth(method = "lm" , se = F)
+    geom_point() +
+    geom_smooth(method = "lm" , se = F)
 
 ```
 
