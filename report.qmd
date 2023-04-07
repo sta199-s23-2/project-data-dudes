@@ -80,7 +80,6 @@ model_coal <- linear_reg() |>
 predict(model_coal, data.frame(Year = 2050, Country.Name = "Untied States"))
 ```
 
-
 ```{r}
 #| label: scatterplot-gas
 
@@ -104,7 +103,7 @@ target_emissions |>
 
 model_gas <- linear_reg() |>
   set_engine("lm") |>
-  fit(Emissions.Production.CO2.Gas ~ Year, data = target_emissions) 
+  fit(Emissions.Production.CO2.Gas ~ Year, Country.Name, data = target_emissions) 
 
 ```
 
@@ -115,6 +114,7 @@ predict(model_gas, data.frame(Year = 2050, Country.Name = "Untied States"))
 
 
 ```
+
 ```{r}
 predict(model_gas, data.frame(Year = 2050, Country.Name = "India"))
 
@@ -123,7 +123,6 @@ predict(model_gas, data.frame(Year = 2050, Country.Name = "India"))
 ```{r}
 predict(model_gas, data.frame(Year = 2050, Country.Name = "China"))
 ```
-
 
 ```{r}
 #| label: scatterplot-oil
