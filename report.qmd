@@ -13,9 +13,9 @@ Project - Global Emissions
 
 Climate change is one of the most pressing issues facing the world today, and global emissions are a major driver of this phenomenon. As human activities continue to release greenhouse gasses into the atmosphere, the Earth's temperature is rising at an unprecedented rate. Consequently, a host of negative consequences such as sea level rise, more frequent and severe weather events, and ecosystem disruption have risen. Fossil fuels are undoubtedly the largest contributor to global climate change. In fact fossil fuels, which include coal, oil and gas account for over 75 percent of global greenhouse gas emissions and nearly 90 per cent of all carbon dioxide emissions. Climate change is widely regarded as the biggest issue we will face; its far reaching effects on the environment and human society pose significant challenges for present and future generations. Considering greenhouse gasses, and consequently fossil fuels are the largest contributor to this acceleration, urgent action is required to reduce our reliance on these energy sources. For these reasons, we have decided to surface the unignorable climate change crisis by delving deeper into the issue of global emissions, particularly fossil fuel usage.
 
-The research question being explored is "Which industry between coal, gas, and oil in India, China, and USA creates the most CO2 emission production from 1992 to 2018?" We have chosen to focus on these three countries as they are the top 3 contributors to global emissions. Together, China, the US, and India contribute to nearly half of the global greenhouse gas emissions. In 2019, China contributed 27%, the US contributed 11%, and India contributed 6.6%. The research question will look at these three specified countries and compare over time which industry (coal, gas or oil) in each country releases the most and least CO2 emission and if the industry adding the most CO2 to the atmosphere changes for each country over time. The hypothesis is that because the three countries are in different stages of development, India and China will have coal as the industry causing the most CO2 emission and USA will have oil as the industry emitting the most CO2.
+The research question being explored is "Which industry between coal, gas, and oil in India, China, and USA creates the most CO2 emission production from 1992 to 2018?" We have chosen to focus on these three countries as they are the top 3 contributors to global emissions. Together, China, the US, and India contribute to nearly half of the global greenhouse gas emissions. In 2019, China contributed 27%, the US contributed 11%, and India contributed 6.6%. The research question will look at these three specified countries and compare over time which industry (coal, gas or oil) in each country releases the most and least CO2 emission and if the industry adding the most CO2 to the atmosphere changes for each country over time. The hypothesis is that because the three countries are in different stages of development, India and China will have coal as the industry causing the most CO2 emission and USA will have oil as the industry emitting the most CO2. In order to evaluate this hypothesis we will also be investigating the relationship between industry emissions rates and Gross Domestic Product (GDP) for each country. GDP is a good measure of country development because it gives information about the size of the economy and how an economy is performing. Thus, we will also be using the variable Country.GDP to further investigate this hypothesis. 
 
-To answer our research question we will be utilizing data from the CORGIS data set. The data set was created by Sam Donald, and was created on September 23, 2022. The observations of this data set compare various countries and regions in relation to overall emission trends. The data set also compares what industry such as coal, gas, etc is responsible for these emissions and how much each industry adds to a specific emission type. The variables from this data set that are involved in our research question are "Emissions.Production.CO2.Coal", "Emissions.Production.CO2.Gas", and "Emissions.Production.CO2.Oil" All of these variables are quantitative variables. Each row of the data represents a different country with a year between 1992 and 2018 in chronological order. The response variables in this research question are the amount of CO2 emissions produced by the coal, gas, and oil industries ("Emissions.Production.CO2.Coal", "Emissions.Production.CO2.Gas", and "Emissions.Production.CO2.Oil") in India, China, and the USA from 1992 to 2018. The variable is quantitative and continuous, as it measures the amount of CO2 emissions produced by each industry in each country over a period of time.
+To answer our research question we will be utilizing data from the CORGIS data set. The data set was created by Sam Donald, and was created on September 23, 2022. The observations of this data set compare various countries and regions in relation to overall emission trends. The data set also compares what industry such as coal, gas, etc is responsible for these emissions and how much each industry adds to a specific emission type. The variables from this data set that are involved in our research question are "Emissions.Production.CO2.Coal", "Emissions.Production.CO2.Gas", and "Emissions.Production.CO2.Oil" All of these variables are quantitative variables. Each row of the data represents a different country with a year between 1992 and 2018 in chronological order. The response variables in this research question are the amount of CO2 emissions measure in metric tons per capita produced by the coal, gas, and oil industries ("Emissions.Production.CO2.Coal", "Emissions.Production.CO2.Gas", and "Emissions.Production.CO2.Oil") in India, China, and the USA from 1992 to 2018. The variable is quantitative and continuous, as it measures the amount of CO2 emissions produced by each industry in each country over a period of time.
 
 To our knowledge, there are not any glaring ethical concerns regarding the collection of this data. Privacy breaches are a potential ethical concern, as research regarding energy and emissions may include sensitive information about individuals. However, our data does not include such metrics. It focuses on countries and industries, opposed to individuals so this is not a concern. It is also important to know that bias in data collection could pose ethical concern. Although, to our knowledge Sam Donald does not have any vested interests or ties to certain organizations or companies that would skew the data.
 
@@ -48,6 +48,8 @@ target_emissions <- global_emissions |>
 
 ```{r}
 #| label: scatterplot-coal
+#| message: FALSE
+#| warning: FALSE
 
 target_emissions |>
   ggplot(
@@ -66,6 +68,8 @@ target_emissions |>
 
 ```{r}
 #| label: scatterplot-coal-r^2
+#| message: FALSE
+#| warning: FALSE
 
 model_coal <- linear_reg() |>
   set_engine("lm") |>
@@ -97,6 +101,8 @@ predict(model_coal, data.frame(Year = 2050, Country.Name = "China"))
 
 ```{r}
 #| label: scatterplot-gas
+#| message: FALSE
+#| warning: FALSE
 
 target_emissions |>
   ggplot(
@@ -115,6 +121,9 @@ target_emissions |>
 
 ```{r}
 #| label: scatterplot-gas-r^2
+#| message: FALSE
+#| warning: FALSE
+
 
 model_gas <- linear_reg() |>
   set_engine("lm") |>
@@ -146,6 +155,9 @@ predict(model_gas, data.frame(Year = 2050, Country.Name = "China"))
 
 ```{r}
 #| label: scatterplot-oil
+#| message: FALSE
+#| warning: FALSE
+
 
 target_emissions |>
   ggplot(
@@ -243,84 +255,113 @@ target_emissions <- target_emissions |>
 ```
 
 ```{r}
+#| label: GDP_trillion 
+
+target_emissions <- target_emissions |> 
+  mutate(GDP_triliion = Country.GDP/1000000000000)
+
+```
+
+
+```{r}
 #| label: percent_total_coal-visual
+#| message: FALSE
+#| warning: FALSE
 
 target_emissions |> 
   ggplot(
-    aes(x = Country.GDP, 
+    aes(x = GDP_triliion, 
         y = percent_total_coal, 
         color = Country.Name)
     ) + 
   geom_point() + 
   geom_smooth(se = FALSE) + 
-  facet_wrap(~ Country.Name, scales = "free_y") + 
+  facet_wrap(~ Country.Name, ncol = 1, scales = "free_y") + 
   labs( 
-    title = "Percentage of Total CO2 Emissions from Coal vs GDP By Country (1992-2018)", 
-    x = "Country's Gross Domestic Product for a Given Year", 
-    y = "% of Total CO2 Emissions from Coal (Metric Tons Per Capita)", 
+    title = 
+    "Percentage of Total CO2 Emissions from Coal vs GDP By Country (1992-2018)", 
+    x = "Country's GDP (in trillions)", 
+    y = 
+      "Percentage of Total CO2 Emissions from Coal \n (Metric Tons Per Capita)", 
     color = "Country") +
   theme(plot.title = element_text(size = 11), 
         axis.title = element_text(size = 10), 
-        axis.text.x = element_text(angle = 90, vjust = 0.75, hjust = 0.5))
+        axis.text.x = element_text(angle = 80, vjust = 0.75, hjust = 0.5)) + 
+  scale_color_brewer(palette = "Set1") +
+  scale_x_continuous(breaks = seq(0, 30, by = 2), 
+                     labels = seq(0, 30, by = 2))
 ```
 
 ```{r}
 #| label: percent_total_gas
 
 target_emissions <- target_emissions |> 
-  mutate(percent_total_gas= (Emissions.Production.CO2.Gas/Emissions.Production.CO2.Total) *100)
+  mutate(percent_total_gas= 
+           (Emissions.Production.CO2.Gas/Emissions.Production.CO2.Total) *100)
 ```
 
 ```{r}
 #| label: percent_total_gas-visual
+#| message: FALSE
+#| warning: FALSE
 
 target_emissions |> 
   ggplot(
-    aes(x = Country.GDP, 
+    aes(x = GDP_triliion, 
         y = percent_total_gas, 
         color = Country.Name)
     ) + 
   geom_point() + 
   geom_smooth(se = FALSE) + 
-  facet_wrap(~ Country.Name, scales = "free_y") + 
+  facet_wrap(~ Country.Name, ncol = 1, scales = "free_y") + 
   labs( 
-    title = "Percentage of Total CO2 Emissions from Gas vs GDP By Country (1992-2018)", 
-    x = "Country's Gross Domestic Product for a Given Year", 
-    y = "% of Total CO2 Emissions from Gas (Metric Tons Per Capita)", 
+    title = 
+    "Percentage of Total CO2 Emissions from Gas vs GDP By Country (1992-2018)", 
+    x = "Country's GDP (in trillions)", 
+    y = " Percentage of Total CO2 Emissions from Gas
+    (Metric Tons Per Capita)", 
     color = "Country") +
   theme(plot.title = element_text(size = 11), 
         axis.title = element_text(size = 10), 
-        axis.text.x = element_text(angle = 90, vjust = 0.75, hjust = 0.5))
+        axis.text.x = element_text(angle = 60, vjust = 0.75, hjust = 0.5)) + 
+  scale_color_brewer(palette = "Set1") + 
+  scale_x_continuous(breaks = seq(0, 30, by = 2), 
+                     labels = seq(0, 30, by = 2))
 ```
 
 ```{r}
 #| label: percent_total_oil
 
 target_emissions <- target_emissions |> 
-  mutate(percent_total_oil= (Emissions.Production.CO2.Oil/Emissions.Production.CO2.Total) *100)
+  mutate(percent_total_oil=
+           (Emissions.Production.CO2.Oil/Emissions.Production.CO2.Total) *100)
 ```
 
 ```{r}
 #| label: percent_total_oil-visual
+#| message: FALSE
+#| warning: FALSE
 
 target_emissions |> 
   ggplot(
-    aes(x = Country.GDP, 
+    aes(x = GDP_triliion, 
         y = percent_total_oil, 
         color = Country.Name)
     ) + 
   geom_point() + 
   geom_smooth(se = FALSE) + 
-  facet_wrap(~ Country.Name, scales = "free_y") + 
+  facet_wrap(~ Country.Name, ncol = 1, scales = "free_y") + 
   labs( 
-    title = "Percentage of Total CO2 Emissions from Oil vs GDP By Country (1992-2018)", 
-    x = "Country's Gross Domestic Product for a Given Year", 
-    y = "% of Total CO2 Emissions from Oil (Metric Tons Per Capita)", 
+    title = 
+    "Percentage of Total CO2 Emissions from Oil vs GDP By Country (1992-2018)", 
+    x = "Country's GDP (in trillions)", 
+    y = "Percent of Total CO2 Emissions from Oil \n (Metric Tons Per Capita)", 
     color = "Country") +
   theme(plot.title = element_text(size = 11), 
         axis.title = element_text(size = 10), 
-        axis.text.x = element_text(angle = 90, vjust = 0.75, hjust = 0.5))
+        axis.text.x = element_text(angle = 60, vjust = 0.75, hjust = 0.5)) +  
+  scale_color_brewer(palette = "Set1") + 
+  scale_x_continuous(breaks = seq(0, 30, by = 2), 
+                     labels = seq(0, 30, by = 2))
 ```
-
-
 
