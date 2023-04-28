@@ -358,6 +358,14 @@ target_emissions |>
 
 ```
 
+```{r}
+#| label: AIC-values
+
+glance(model_coal)$AIC
+glance(model_gas)$AIC
+glance(model_oil)$AIC
+```
+
 **Results**
 
 The project explored coal, gas, and oil consumption by three countries - China, India, and the United States. These three countries are at three different points in their development and the data contributes to this point. In the first three graphs, the relationship between country GDP, which is a good measure of country development, and the percent of total CO2 production in different industries over time is displayed. We are using these graphs to explore trends overtime, rather than quantifying the percentage of emissions in each country. The graph that displays information about the coal industry shows that at a certain GDP, it appears that reliance on coal decreases in that country. According to the above graph, this occurs when the GDP reaches about \$12 trillion. As seen in both China and in the US, after the countries hit about \$12 trillion in GDP, their percentage CO2 emissions from coal decreases. Meanwhile, India has not reached this development as of yet. Thus, there is still a relatively positive trend in the coal emissions in India. This data supports our hypothesis that differences in development are related to the source of CO2 emissions.
@@ -374,7 +382,7 @@ For oil, the United States has the greatest consumption but had a slight decline
 
 The mean coal consumption for coal in China, India, and the United States respectively are 4651, 872, and 1923 metric tons per capita. The mean gas consumption for coal in China, India, and the United States respectively are 164, 71, and 1285 metric tons per capita. The mean oil consumption for coal in China, India, and the United States respectively are 871, 380, and 2328 metric tons per capita.
 
-By conducting a linear regression model on the data, we were able to make predictions about each country's consumption of coal, gas, and oil in the year 2050. For coal by 2050, we predict that the United States will consume 956 metric tons per capita, while India consumes 3079 metric tons per capita, and China consumes 16,214 metric tons per capita. For gas by 2050, we predict that the United States will consume 1967 metric tons per capita, while India consumes 265 metric tons per capita, and China will consume 934 metric tons per capita. For oil by 2050, we predict that the United States will consume 2297 metric tons per capita, while India consumes 1144 metric tons per capita, and China consumes 2772 metric tons per capita.
+By conducting a linear regression model on the data, we were able to make predictions about each country's consumption of coal, gas, and oil in the year 2050. For coal by 2050, we predict that the United States will consume 956 metric tons per capita, while India consumes 3079 metric tons per capita, and China consumes 16,214 metric tons per capita. For gas by 2050, we predict that the United States will consume 1967 metric tons per capita, while India consumes 265 metric tons per capita, and China will consume 934 metric tons per capita. For oil by 2050, we predict that the United States will consume 2297 metric tons per capita, while India consumes 1144 metric tons per capita, and China consumes 2772 metric tons per capita. Based on the AIC values, country and year are the best predictors of gas emissions among the three types of industries.
 
 In general, India and China are growing the fastest in consumption for coal which supports our hypothesis. By 2050, these two countries would be consuming over 19000 metric tons per capita in coal with China contributing over 85%. For gas, the United States will remain a majority consumer but India and China will grow more dramatically by consuming over 1100 metric tons per capita. For oil, India and China will consume over 3900 metric tons per capita. China consumes more than India in all three forms and over consumes the United States in all by gas. The United States over consumes India in all but coal. Essentially for coal, in order of greatest to least consumption, the country order is China, India, and the United States. For gas, in order of greatest to least consumption, the country order is United States, China, and India. For oil, in order of greatest to least consumption, the country order is China, United States, India. We suggest that since the United States is at a greater stage of development, they should start using more alternative energy forms and renewable forms of energy. The slight steadiness in the trend lines of the United States support this idea along with the subtle declines present in coal and oil.
 
