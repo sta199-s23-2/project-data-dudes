@@ -1,8 +1,10 @@
 ---
-title: "TEAM NAME"
+title: "Data Dudes"
 subtitle: "STA 199 Project"
 format: html
 editor: visual
 ---
 
-Add project abstract here.
+Abstract
+
+Our project seeks to explore how different fossil fuel industries contribute to CO2 emissions in three countries - China, India, and the United States. The three main industries from the data set that we investigated were coal, gas, and oil. The research question concerned what the consumption of oil, gas, and coal were in these three countries. After performing a linear regression line and multiple predictions, we were able to see how the development of the country, defined by their GDP, affects the amount of consumption and CO2 emissions that they release. For example, after a country reaches a certain GDP of 12 trillion, it appears that reliance on coal decreases in that country and this is shown in the United States and China. However, for India, the consumption of coal is still fairly high as it continues to develop. For gas, after a country reaches a GDP of 15 trillion, it appears that reliance on gas increases in that country - which is shown in the United States and in the prediction of United States consumption of gas in 2050. Oil was not predictive of trends in developing vs developed countries. Essentially, looking forward, both developing and developed countries in terms of GDP, can reduce their CO2 emissions. Further research and aid with investment in renewable resources in developing countries would help them reduce their coal consumption. Countries such as the United States should invest more in renewable energy sources and reduce consumption of gas as they have the GDP to afford alternative energy sources.
