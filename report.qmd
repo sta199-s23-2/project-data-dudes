@@ -17,6 +17,8 @@ The research question being explored is "Which industry between coal, gas, and o
 
 To answer our research question we will be utilizing data from the CORGIS data set. The data set was created by Sam Donald, and was created on September 23, 2022. The observations of this data set compare various countries and regions in relation to overall emission trends. The data set also compares what industry such as coal, gas, etc is responsible for these emissions and how much each industry adds to a specific emission type. The variables from this data set that are involved in our research question are "Emissions.Production.CO2.Coal", "Emissions.Production.CO2.Gas", and "Emissions.Production.CO2.Oil" All of these variables are quantitative variables. Each row of the data represents a different country with a year between 1992 and 2018 in chronological order. The response variables in this research question are the amount of CO2 emissions measure in metric tons per capita produced by the coal, gas, and oil industries ("Emissions.Production.CO2.Coal", "Emissions.Production.CO2.Gas", and "Emissions.Production.CO2.Oil") in India, China, and the USA from 1992 to 2018. The variable is quantitative and continuous, as it measures the amount of CO2 emissions produced by each industry in each country over a period of time.
 
+To properly address the above variables, the data was filtered for the three countries of interest (USA, China, and India). Additionally, four new variables were created. Three new variables were created to represent the percent of a target country's total CO2 emissions form each industry (coal, gas, and oil). These were named percent_total_coal, percent_total_gas, percent_total_oil respectively. A fourth variable was created to better display the GDP in trillions of dollars for each country. This variable was named GDP_trillion. 
+
 To our knowledge, there are not any glaring ethical concerns regarding the collection of this data. Privacy breaches are a potential ethical concern, as research regarding energy and emissions may include sensitive information about individuals. However, our data does not include such metrics. It focuses on countries and industries, opposed to individuals so this is not a concern. It is also important to know that bias in data collection could pose ethical concern. Although, to our knowledge Sam Donald does not have any vested interests or ties to certain organizations or companies that would skew the data.
 
 [Literature Review:]{.underline}
@@ -171,6 +173,10 @@ target_emissions |>
                      labels = seq(0, 30, by = 2))
 ```
 
+The above graphs were created as scatter plots (using geom_point and geom_smooth) to display a clear visualization of the emission trends over the continuous GDP scale. Because the dataset showed that GDP increased overtime, scatter plots were used to represent the continuos data of both variables, percent_total_(industry) and GDP_trillions. The above graphs explore trends overtime, rather than quantifying the percentage of emissions in each country.
+
+
+
 ```{r}
 #| label: scatterplot-coal
 #| message: FALSE
@@ -300,6 +306,10 @@ target_emissions |>
 
 ```
 
+Again, the above graphs explore trends overtime, so scatter plots were used to best represent this data, considering that both variables are continuous. To further analyze this data, linear regression models were fitted to the above trends. Linear regression models were chosen since the dependent variable, (emission production) is continuous and the data appeared to change in a linear manner. The regression models  displayed the predicted emission trends approaching 2050 which could be used to further analyze industry progression. In the linear regression model, the explanatory variables, year and country name, interact. This is because these variables change with respect to each other when predicting the response variable, emissions.  
+
+
+
 ```{r}
 #| label: scatterplot-oil-r^2
 
@@ -358,6 +368,8 @@ target_emissions |>
 
 ```
 
+The above mean values were calculated to summarize the overall state of emission productions per industry in the target countries. 
+
 ```{r}
 #| label: AIC-values
 
@@ -365,6 +377,8 @@ glance(model_coal)$AIC
 glance(model_gas)$AIC
 glance(model_oil)$AIC
 ```
+
+Using AIC values, it could be determined that the second model, model_gas, has the best fitting linear regression model compared to the coal and oil models as suggested by the lowest AIC value, 878. This suggests that the predictions for future gas emissions are most accurate. 
 
 **Results**
 

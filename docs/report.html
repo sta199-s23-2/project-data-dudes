@@ -189,6 +189,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Climate change is one of the most pressing issues facing the world today, and global emissions are a major driver of this phenomenon. As human activities continue to release greenhouse gasses into the atmosphere, the Earth’s temperature is rising at an unprecedented rate. Consequently, a host of negative consequences such as sea level rise, more frequent and severe weather events, and ecosystem disruption have risen. Fossil fuels are undoubtedly the largest contributor to global climate change. In fact fossil fuels, which include coal, oil and gas account for over 75 percent of global greenhouse gas emissions and nearly 90 per cent of all carbon dioxide emissions. Climate change is widely regarded as the biggest issue we will face; its far reaching effects on the environment and human society pose significant challenges for present and future generations. Considering greenhouse gasses, and consequently fossil fuels are the largest contributor to this acceleration, urgent action is required to reduce our reliance on these energy sources. For these reasons, we have decided to surface the unignorable climate change crisis by delving deeper into the issue of global emissions, particularly fossil fuel usage.</p>
 <p>The research question being explored is “Which industry between coal, gas, and oil in India, China, and USA creates the most CO2 emission production from 1992 to 2018?” We have chosen to focus on these three countries as they are the top 3 contributors to global emissions. Together, China, the US, and India contribute to nearly half of the global greenhouse gas emissions. In 2019, China contributed 27%, the US contributed 11%, and India contributed 6.6%. The research question will look at these three specified countries and compare over time which industry (coal, gas or oil) in each country releases the most and least CO2 emission and if the industry adding the most CO2 to the atmosphere changes for each country over time. The hypothesis is that because the three countries are in different stages of development, India and China will have coal as the industry causing the most CO2 emission and USA will have oil as the industry emitting the most CO2. In order to evaluate this hypothesis we will also be investigating the relationship between industry emissions rates and Gross Domestic Product (GDP) for each country. GDP is a good measure of country development because it gives information about the size of the economy and how an economy is performing. Thus, we will also be using the variable Country.GDP to further investigate this hypothesis.</p>
 <p>To answer our research question we will be utilizing data from the CORGIS data set. The data set was created by Sam Donald, and was created on September 23, 2022. The observations of this data set compare various countries and regions in relation to overall emission trends. The data set also compares what industry such as coal, gas, etc is responsible for these emissions and how much each industry adds to a specific emission type. The variables from this data set that are involved in our research question are “Emissions.Production.CO2.Coal”, “Emissions.Production.CO2.Gas”, and “Emissions.Production.CO2.Oil” All of these variables are quantitative variables. Each row of the data represents a different country with a year between 1992 and 2018 in chronological order. The response variables in this research question are the amount of CO2 emissions measure in metric tons per capita produced by the coal, gas, and oil industries (“Emissions.Production.CO2.Coal”, “Emissions.Production.CO2.Gas”, and “Emissions.Production.CO2.Oil”) in India, China, and the USA from 1992 to 2018. The variable is quantitative and continuous, as it measures the amount of CO2 emissions produced by each industry in each country over a period of time.</p>
+<p>To properly address the above variables, the data was filtered for the three countries of interest (USA, China, and India). Additionally, four new variables were created. Three new variables were created to represent the percent of a target country’s total CO2 emissions form each industry (coal, gas, and oil). These were named percent_total_coal, percent_total_gas, percent_total_oil respectively. A fourth variable was created to better display the GDP in trillions of dollars for each country. This variable was named GDP_trillion.</p>
 <p>To our knowledge, there are not any glaring ethical concerns regarding the collection of this data. Privacy breaches are a potential ethical concern, as research regarding energy and emissions may include sensitive information about individuals. However, our data does not include such metrics. It focuses on countries and industries, opposed to individuals so this is not a concern. It is also important to know that bias in data collection could pose ethical concern. Although, to our knowledge Sam Donald does not have any vested interests or ties to certain organizations or companies that would skew the data.</p>
 <p><u>Literature Review:</u></p>
 <p>https://ecowarriorprincess.net/2018/04/carbon-intensive-industries-industry-sectors-emit-the-most-carbon/</p>
@@ -204,10 +205,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-✔ ggplot2 3.4.0     ✔ purrr   1.0.0
-✔ tibble  3.2.1     ✔ dplyr   1.1.1
-✔ tidyr   1.2.1     ✔ stringr 1.5.0
-✔ readr   2.1.3     ✔ forcats 0.5.2
+✔ ggplot2 3.4.0      ✔ purrr   1.0.0 
+✔ tibble  3.1.8      ✔ dplyr   1.0.10
+✔ tidyr   1.2.1      ✔ stringr 1.5.0 
+✔ readr   2.1.3      ✔ forcats 0.5.2 
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()</code></pre>
@@ -228,11 +229,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ✖ dplyr::lag()      masks stats::lag()
 ✖ yardstick::spec() masks readr::spec()
 ✖ recipes::step()   masks stats::step()
-<<<<<<< HEAD
 • Search for functions across packages at https://www.tidymodels.org/find/</code></pre>
-=======
-• Use tidymodels_prefer() to resolve common conflicts.</code></pre>
->>>>>>> 363c9efb5a598d9d18da76bdbecb2389c842d584
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>global_emissions <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/global_emissions.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -349,6 +346,7 @@ dbl (18): Year, Country.GDP, Country.Population, Emissions.Production.CH4, E...
 <p><img src="report_files/figure-html/percent_total_oil-visual-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>The above graphs were created as scatter plots (using geom_point and geom_smooth) to display a clear visualization of the emission trends over the continuous GDP scale. Because the dataset showed that GDP increased overtime, scatter plots were used to represent the continuos data of both variables, percent_total_(industry) and GDP_trillions. The above graphs explore trends overtime, rather than quantifying the percentage of emissions in each country.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>target_emissions <span class="sc">|&gt;</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
@@ -469,6 +467,7 @@ dbl (18): Year, Country.GDP, Country.Population, Emissions.Production.CH4, E...
 <p><img src="report_files/figure-html/scatterplot-oil-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>Again, the above graphs explore trends overtime, so scatter plots were used to best represent this data, considering that both variables are continuous. To further analyze this data, linear regression models were fitted to the above trends. Linear regression models were chosen since the dependent variable, (emission production) is continuous and the data appeared to change in a linear manner. The regression models displayed the predicted emission trends approaching 2050 which could be used to further analyze industry progression. In the linear regression model, the explanatory variables, year and country name, interact. This is because these variables change with respect to each other when predicting the response variable, emissions.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>model_oil <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
@@ -541,6 +540,7 @@ dbl (18): Year, Country.GDP, Country.Population, Emissions.Production.CH4, E...
 3 United States    2329.</code></pre>
 </div>
 </div>
+<p>The above mean values were calculated to summarize the overall state of emission productions per industry in the target countries.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(model_coal)<span class="sc">$</span>AIC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -555,6 +555,7 @@ dbl (18): Year, Country.GDP, Country.Population, Emissions.Production.CH4, E...
 <pre><code>[1] 973.8588</code></pre>
 </div>
 </div>
+<p>Using AIC values, it could be determined that the second model, model_gas, has the best fitting linear regression model compared to the coal and oil models as suggested by the lowest AIC value, 878. This suggests that the predictions for future gas emissions are most accurate.</p>
 <p><strong>Results</strong></p>
 <p>The project explored coal, gas, and oil consumption by three countries - China, India, and the United States. These three countries are at three different points in their development and the data contributes to this point. In the first three graphs, the relationship between country GDP, which is a good measure of country development, and the percent of total CO2 production in different industries over time is displayed. We are using these graphs to explore trends overtime, rather than quantifying the percentage of emissions in each country. The graph that displays information about the coal industry shows that at a certain GDP, it appears that reliance on coal decreases in that country. According to the above graph, this occurs when the GDP reaches about $12 trillion. As seen in both China and in the US, after the countries hit about $12 trillion in GDP, their percentage CO2 emissions from coal decreases. Meanwhile, India has not reached this development as of yet. Thus, there is still a relatively positive trend in the coal emissions in India. This data supports our hypothesis that differences in development are related to the source of CO2 emissions.</p>
 <p>The second graph, which displays information about the gas industry, shows that at a certain GDP, it appears that reliance on gas increases in that country. According to the above graph, the total CO2 emissions from gas has been continually increasing in China as the GDP has increased. In the US, the total CO2 emissions from gas has rapidly increased after the country reached $15 trillion in GDP. Meanwhile, India has not reached a point in its development where there is a positive trend in the use of the total CO2 emissions from gas. This data supports our hypothesis that differences in development are related to the source of CO2 emissions, especially when it comes to converting to newer, more renewable ways to produce energy (such as in the gas industry).</p>
